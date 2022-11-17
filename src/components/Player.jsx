@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
-import { MdShuffle, MdSkipPrevious, MdSkipNext } from 'react-icons/md'
+import {
+  MdShuffle,
+  MdSkipPrevious,
+  MdSkipNext,
+  MdPauseCircleOutline,
+  MdPlayCircleOutline,
+} from 'react-icons/md'
 import { setPlayerState, selectSongById } from '../actions'
 import Progress from './ProgressBar'
 import SongTime from './SongTime'
+import './css/Player.css'
 
 const Player = ({
   selectedSongId,
@@ -53,7 +60,6 @@ const Player = ({
   useEffect(() => {
     dispatch({ type: 'PLAYER_STATE_SELECTED', payload: 1 })
     audioRef.current.play()
-    // console.log(audioRef.current.duration);
     document.getElementById('focus-link').click()
     window.history.pushState({}, '', '/')
   }, [selectedSongId, dispatch])
@@ -72,16 +78,16 @@ const Player = ({
           setShuffled(!shuffled)
         }}
       >
-        {MdShuffle}
+        <MdShuffle />
       </div>
       <div className="control" onClick={onBackwardClick}>
-        {MdSkipPrevious}
+        <MdSkipPrevious />
       </div>
       <div className="main-control control" onClick={onMusicPlay}>
-        <i className={`fas fa-${playerState ? 'pause' : 'play'}-circle`}></i>
+        {playerState ? <MdPauseCircleOutline /> : <MdPlayCircleOutline />}
       </div>
       <div className="control" onClick={onForwardClick}>
-        {MdSkipNext}
+        <MdSkipNext />
       </div>
       <Progress />
 

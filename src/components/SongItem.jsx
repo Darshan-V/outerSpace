@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { selectSong } from '../actions'
+import './css/SongItem.css'
 
 const SongItem = ({ song, index, selectSong, selectedSongId, playerState }) => {
   const [, setHovered] = useState(false)

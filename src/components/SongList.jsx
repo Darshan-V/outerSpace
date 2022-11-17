@@ -1,4 +1,5 @@
 import SongItem from './SongItem'
+import './css/SongList.css'
 
 const SongList = ({ songs = [] }) => {
   const songTags = songs.map((song, index) => {

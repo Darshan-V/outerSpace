@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { selectSong } from '../actions'
+import './css/SongDetail.css'
 
 const SongDetail = ({
   selectedSongId = -1,
@@ -17,12 +18,7 @@ const SongDetail = ({
             </div>
             <div className="header">{songs[selectedSongId].name}</div>
           </div>
-          <div className="album-img">
-            {/* <img
-              src={songs[selectedSongId].links.images[1].url}
-              alt={songs[selectedSongId].name}
-            /> */}
-          </div>
+          <div className="album-img"></div>
           <div className="artist-img">
             <img
               src={songs[selectedSongId].links.images[0].url}
