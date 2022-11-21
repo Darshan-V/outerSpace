@@ -1,25 +1,38 @@
+// import React from 'react'
+// import { createRoot } from 'react-dom/client'
+// import './index.css'
+// import App from './components/App'
+// import reducer from './reducers'
+// import { legacy_createStore as createStore } from 'redux'
+// import { Provider } from 'react-redux'
+
+// const rooty = () => {
+//   const s = new SpotifyWebApi()
+//   s.searchTracks('sing me to sleep')
+//   return (
+//     <Provider store={createStore(reducer)}>
+//       <App />
+//     </Provider>
+//   )
+// }
+// const rootEle = document.getElementById('root')
+// const root = createRoot(rootEle)
+// root.render(rooty())
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './components/App'
-import reducer from './reducers'
-import combineReducers from './reducers/index.js'
-import { legacy_createStore as createStore } from 'redux'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
-const rooty = () => {
-  console.log(combineReducers)
-  return (
-    <Provider
-      store={createStore(
-        reducer,
-        window.__REDUX_DEVTOOLS_EXTENSION__ &&
-          window.__REDUX_DEVTOOLS_EXTENSION__()
-      )}
-    >
-      <App />
-    </Provider>
-  )
-}
+import './index.css'
+import App from './App'
+import { store } from './reducers/store'
 
-ReactDOM.render(rooty(), document.getElementById('root'))
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+    </Provider>
+  </React.StrictMode>
+)
