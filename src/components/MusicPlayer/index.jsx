@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import './index.css'
 
 import {
   nextSong,
@@ -64,6 +65,7 @@ const MusicPlayer = () => {
         isActive={isActive}
         activeSong={activeSong}
       />
+
       <div className="mainControls">
         <Controls
           isPlaying={isPlaying}

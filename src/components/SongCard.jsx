@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import PlayPause from './PlayPause'
 import { playPause, setActiveSong } from '../reducers/features/playerFilter'
+import './SongCard.css'
 
 const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   const dispatch = useDispatch()

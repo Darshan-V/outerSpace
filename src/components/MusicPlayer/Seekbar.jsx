@@ -1,4 +1,6 @@
 import React from 'react'
+import { BsFillSkipBackwardFill, BsFillSkipForwardFill } from 'react-icons/bs'
+import './Seekbar.css'
 
 const Seekbar = ({ value, min, max, onInput, setSeekTime, appTime }) => {
   const getTime = (time) =>
@@ -11,7 +13,7 @@ const Seekbar = ({ value, min, max, onInput, setSeekTime, appTime }) => {
         onClick={() => setSeekTime(appTime - 5)}
         className="seekButton"
       >
-        -
+        <BsFillSkipBackwardFill />
       </button>
       <p className="seekLength">{value === 0 ? '0:00' : getTime(value)}</p>
       <input
@@ -27,9 +29,9 @@ const Seekbar = ({ value, min, max, onInput, setSeekTime, appTime }) => {
       <button
         type="button"
         onClick={() => setSeekTime(appTime + 5)}
-        className="seekTimer"
+        className="seekButton"
       >
-        +
+        <BsFillSkipForwardFill />
       </button>
     </div>
   )

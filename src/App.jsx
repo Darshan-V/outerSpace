@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import { MusicPlayer } from './components/index'
 import TopCharts from './actions/topCharts'
+import './App.css'
 
 const App = () => {
   const { activeSong } = useSelector((state) => state.player)
@@ -16,9 +17,9 @@ const App = () => {
       </div>
 
       {activeSong?.title && (
-        <div className="musicPlayer_App">
+        <footer className="musicPlayer_App">
           <MusicPlayer />
-        </div>
+        </footer>
       )}
     </div>
   )
