@@ -7,7 +7,7 @@ export const shazamCoreApi = createApi({
     prepareHeaders: (headers) => {
       headers.set(
         'X-RapidAPI-Key',
-        import.meta.env.VITE_SHAZAM_CORE_RAPID_API_KEY
+        'da3c9b5f4cmsh7ed7146e7206095p1f0e66jsn126f03eeb0c7'
       )
 
       return headers
@@ -46,3 +46,21 @@ export const {
   useGetSongsByCountryQuery,
   useGetSongsBySearchQuery,
 } = shazamCoreApi
+
+// const url = 'https://shazam-core.p.rapidapi.com/v1/charts/world'
+
+// const options = {
+//   method: 'GET',
+//   headers: {
+//     'X-RapidAPI-Key': 'da3c9b5f4cmsh7ed7146e7206095p1f0e66jsn126f03eeb0c7',
+//     'X-RapidAPI-Host': 'shazam-core.p.rapidapi.com',
+//   },
+// }
+// function useGetTopChartsQuery() {
+//   return fetch(url, options)
+//     .then((res) => res.json())
+//     .then((json) => console.log(json))
+//     .catch((err) => console.error('error:' + err))
+// }
+
+// export { useGetTopChartsQuery }
