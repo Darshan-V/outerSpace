@@ -1,10 +1,16 @@
 .seekBarContainer{
     display: flex;
+    width: 600px;
+    align-items: baseline;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
 }
 .seekButton{
     border-radius: 20%;
     height: 30px;
     
+}
+
+.seekRange{
+    width: 400px;
 }

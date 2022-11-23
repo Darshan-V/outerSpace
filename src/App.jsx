@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 
-import { MusicPlayer } from './components/index'
-import TopCharts from './actions/topCharts'
+import { MusicPlayer, Searchbar } from './components/index'
+import { TopCharts, Search } from './pages'
 import './App.css'
 
 const App = () => {
@@ -11,8 +11,10 @@ const App = () => {
   return (
     <div className="OuterSpace">
       <div className="routes">
+        <Searchbar />
         <Routes>
           <Route path="/" element={<TopCharts />} />
+          <Route path="/search/:searchTerm" element={<Search />} />
         </Routes>
       </div>
 

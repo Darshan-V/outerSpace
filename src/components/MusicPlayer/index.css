@@ -1,9 +1,28 @@
 .mainContainer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+    padding-bottom:70px ;
+    border-top: groove slategray;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
 }
 .mainControls{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
+
+.controllersContainer{
+    display: flex;
+    width: 600px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 50px;
+    max-height: 400px;
+}
+
+
+
+

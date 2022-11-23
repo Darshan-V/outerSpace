@@ -1,0 +1,23 @@
+.topCharts{
+    display: flex;
+    height: 70vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+    width: 100%;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+}
+
+.songsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent; 
+}

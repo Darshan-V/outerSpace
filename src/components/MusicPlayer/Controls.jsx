@@ -6,7 +6,7 @@ import {
   BsFillPlayFill,
   BsShuffle,
 } from 'react-icons/bs'
-
+import './Controls.css'
 const Controls = ({
   isPlaying,
   repeat,
@@ -21,22 +21,22 @@ const Controls = ({
   <div className="controllersContainer">
     <BsArrowRepeat
       onClick={() => setRepeat((prev) => !prev)}
-      className="hidden sm:block cursor-pointer"
+      className="repeatButton"
     />
     {currentSongs?.length && (
-      <MdSkipPrevious className="cursor-pointer" onClick={handlePrevSong} />
+      <MdSkipPrevious className="playPrev" onClick={handlePrevSong} />
     )}
     {isPlaying ? (
-      <BsFillPauseFill onClick={handlePlayPause} className="cursor-pointer" />
+      <BsFillPauseFill onClick={handlePlayPause} className="pause" />
     ) : (
-      <BsFillPlayFill onClick={handlePlayPause} className="cursor-pointer" />
+      <BsFillPlayFill onClick={handlePlayPause} className="play" />
     )}
     {currentSongs?.length && (
-      <MdSkipNext className="cursor-pointer" onClick={handleNextSong} />
+      <MdSkipNext className="playNext" onClick={handleNextSong} />
     )}
     <BsShuffle
       onClick={() => setShuffle((prev) => !prev)}
-      className="hidden sm:block cursor-pointer"
+      className="shuffle"
     />
   </div>
 )

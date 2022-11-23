@@ -1,0 +1,38 @@
+.repeatButton{
+    color: cornflowerblue;
+}
+.playPrev{
+    color: darkslateblue;
+}
+.pause{
+    color: seagreen;
+}
+.play{
+    color: seagreen;
+}
+.playNext{
+    color: darkslateblue;
+}
+.shuffle{
+    color: steelblue;
+}
+
+
+.repeatButton:hover{
+    color: rgb(58, 121, 236);
+}
+.playPrev:hover{
+    color: rgb(89, 73, 194);
+}
+.pause:hover{
+    color: rgb(236, 162, 89);
+}
+.play:hover{
+    color: rgb(13, 91, 47);
+}
+.playNext:hover{
+    color: rgb(89, 73, 194);
+}
+.shuffle:hover{
+    color: rgb(26, 56, 81);
+}

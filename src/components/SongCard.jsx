@@ -34,10 +34,13 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
 
       <div className="songMeta">
         <p className="songHead">
-          <Link to={`/songs/${song?.key}`}>{song.title}</Link>
+          <Link style={{ color: 'whitesmoke' }} to={`/songs/${song?.key}`}>
+            {song.title}
+          </Link>
         </p>
         <p className="songArtist">
           <Link
+            style={{ color: 'white' }}
             to={
               song.artists
                 ? `/artists/${song?.artists[0]?.adamid}`
