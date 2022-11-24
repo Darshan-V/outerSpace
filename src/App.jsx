@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 
-import { MusicPlayer, Searchbar, Sidebar } from './components/index'
+import { MusicPlayer, Searchbar, Sidebar, TopPlay } from './components/index'
 import { TopCharts, Search } from './pages'
 import './App.css'
 
@@ -11,14 +11,20 @@ const App = () => {
   return (
     <div className="OuterSpace">
       <Sidebar />
-      <div className="routes">
-        <Searchbar />
-        <Routes>
-          <Route path="/top-charts" element={<TopCharts />} />
-          <Route path="/search/:searchTerm" element={<Search />} />
-        </Routes>
+      <div>
+        <div className="routes">
+          <Searchbar />
+          <div>
+            <Routes>
+              <Route path="/top-charts" element={<TopCharts />} />
+              <Route path="/search/:searchTerm" element={<Search />} />
+            </Routes>
+          </div>
+          <div>
+            <TopPlay />
+          </div>
+        </div>
       </div>
-
       {activeSong?.title && (
         <footer className="musicPlayer_App">
           <MusicPlayer />
