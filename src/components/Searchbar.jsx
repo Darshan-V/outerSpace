@@ -10,7 +10,7 @@ function Searchbar() {
     navigate(`/search/${searchTerm}`)
   }
   return (
-    <form onSubmit={handleSubmit} autoComplete="off" className="searchForm">
+    <form onSubmit={handleSubmit} className="searchForm">
       <label htmlFor="search-field" className="searchLabel">
         Search all files
       </label>
