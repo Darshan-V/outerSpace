@@ -10,22 +10,24 @@ const App = () => {
 
   return (
     <div className="OuterSpace">
-      <Sidebar />
-      <div>
-        <div className="routes">
-          <Searchbar />
-          <div>
-            <Routes>
-              <Route path="/top-charts" element={<TopCharts />} />
-              <Route path="/search/:searchTerm" element={<Search />} />
-            </Routes>
-          </div>
-          <div>
-            <TopPlay />
+      <div className="home">
+        <Sidebar />
+        <div className="routerDiv">
+          <div className="routes">
+            <Searchbar className="searchHome" />
+            <div>
+              <Routes>
+                <Route path="/top-charts" element={<TopCharts />} />
+                <Route path="/search/:searchTerm" element={<Search />} />
+              </Routes>
+            </div>
           </div>
         </div>
+        <div>
+          <TopPlay />
+        </div>
       </div>
-      {activeSong?.title && (
+      {activeSong.title && (
         <footer className="musicPlayer_App">
           <MusicPlayer />
         </footer>

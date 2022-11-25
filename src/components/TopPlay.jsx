@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode } from 'swiper'
 import PlayPause from './PlayPause'
 import { playPause, setActiveSong } from '../reducers/features/playerFilter'
 import { useGetTopChartsQuery } from '../reducers/services/shazamservice'
+import './Topplay.css'
 
 const TopChartCard = ({
   song,
@@ -16,7 +15,6 @@ const TopChartCard = ({
   handlePlayClick,
 }) => (
   <div className="tcContainer">
-    <h3 className="tcHead">{i + 1}.</h3>
     <div className="tcElement">
       <img className="tcImage" src={song?.images?.coverart} alt={song?.title} />
       <div className="tcCard">
@@ -92,31 +90,19 @@ const TopPlay = () => {
           </Link>
         </div>
 
-        <Swiper
-          slidesPerView="auto"
-          spaceBetween={15}
-          freeMode
-          centeredSlides
-          centeredSlidesBounds
-          modules={[FreeMode]}
-          className="mt-4"
-        >
+        <div className="topArtistsPeople">
           {topPlays?.slice(0, 5).map((artist) => (
-            <SwiperSlide
-              key={artist?.key}
-              style={{ width: '25%', height: 'auto' }}
-              className="swiperSlideDiv"
-            >
+            <div key={artist?.key} className="artistGroup">
               <Link to={`/artists/${artist?.artists[0].adamid}`}>
                 <img
                   src={artist?.images?.background}
                   alt="Name"
-                  className="linkInSwipe"
+                  className="artistImg"
                 />
               </Link>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,105 @@
+.topChartsContainer{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-content: space-around;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+}
+.topPlays{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: scroll;
+}
+
+
+.tcContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: groove;
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(93, 92, 92) 0%, rgb(37, 46, 80) 99.4%);
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tcElement{
+    display: flex;
+    flex-direction: row;
+}
+.tcImage{
+    border-radius: 50%;
+    padding-left: 5px;
+}
+.tcSongLink{
+    color: antiquewhite;
+    font-weight: bolder;
+    max-width: 300px;
+}
+.tcArtistLink{
+    color: beige;
+    font-style: italic;
+}
+.topArtistContainer{
+    display: flex;
+    flex-direction: column;
+}
+.topArtistsLink{
+    color: whitesmoke;
+}
+.topArtists{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(24, 44, 61);
+    align-items: center;
+    height: 17vh;
+    padding-bottom: 20px;
+}
+.topArtistsHead{
+    color:thistle;
+    box-shadow: 2px 5px 5px rgb(27, 76, 85);
+
+}
+.topArtistsPeople{
+    display: flex;
+    max-width: 400px;
+    flex-direction: row;
+    background-color: rgb(24, 44, 61);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 20px;
+    height: 200px;
+}
+
+.artistGroup{
+    width: 80px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 5px rgb(38, 79, 87);
+    margin: 10px;
+
+}
+
+.artistImg{
+    width: 80px;
+    margin: auto;
+    height: 70px;
+    border-radius: 20px;
+}
+
+.topChartsHead{
+    color: wheat;
+    box-shadow: 2px 5px 5px rgb(28, 74, 83);
+
+}
+.topChartsLink{
+    color: wheat;
+    padding-left: 30px;
+}

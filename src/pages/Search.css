@@ -1,4 +1,4 @@
-.topCharts{
+.searchDiv{
     display: flex;
     height: 70vh;
     overflow: hidden;
@@ -11,14 +11,10 @@
     margin-top: 30px;
 }
 
-.songsContainer{
+.searchedSongsContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1200px;
+    width: 1180px;
     overflow: scroll;
-}
-::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent; 
 }

@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { HiOutlineHashtag, HiOutlineMenu } from 'react-icons/hi'
-import { RiCloseLine } from 'react-icons/ri'
+import { HiOutlineHashtag } from 'react-icons/hi'
+import './Sidebar.css'
 
 const links = [
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
@@ -24,25 +24,11 @@ const NavLinks = ({ handleClick }) => (
 )
 
 const Sidebar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <>
-      <div className="navLinks">
+      <div className="sideBar">
         <h2>OuterSpace</h2>
         <NavLinks />
-      </div>
-      <div className="sideMenu">
-        {!mobileMenuOpen ? (
-          <HiOutlineMenu
-            className="menuIcon"
-            onClick={() => setMobileMenuOpen(true)}
-          />
-        ) : (
-          <RiCloseLine
-            className="menuCloseIcon"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-        )}
       </div>
     </>
   )

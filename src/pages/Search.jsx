@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Loader, SongCard } from '../components'
 import { useGetSongsBySearchQuery } from '../reducers/services/shazamservice'
+import './Search.css'
 
 const Search = () => {
   const { searchTerm } = useParams()
@@ -19,7 +20,7 @@ const Search = () => {
         Showing results for <span className="droppedResult">{searchTerm}</span>
       </h2>
 
-      <div className="songsContainer">
+      <div className="searchedSongsContainer">
         {songs.map((song, i) => (
           <SongCard
             key={song.key}
