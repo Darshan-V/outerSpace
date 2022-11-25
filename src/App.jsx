@@ -23,9 +23,6 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div>
-          <TopPlay />
-        </div>
       </div>
       {activeSong.title && (
         <footer className="musicPlayer_App">
