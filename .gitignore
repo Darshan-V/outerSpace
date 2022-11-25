@@ -10,3 +10,4 @@ npm-debug.log*
 
 src/reducers/services/shazamService.js
 .env
+package.json
