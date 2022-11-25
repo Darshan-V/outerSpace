@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { Loader, SongCard } from '../components/index'
 import { useGetTopChartsQuery } from '../reducers/services/shazamservice'
+import './Discover.css'
 
 const Discover = () => {
   const { data, isFetching } = useGetTopChartsQuery()
@@ -15,7 +16,7 @@ const Discover = () => {
     <div className="Discover">
       <h2 className="topchartsLabel">Discover Top Charts</h2>
 
-      <div className="songsContainer">
+      <div className="DiscoverSongsContainer">
         {data.map((song, i) => (
           <SongCard
             key={song.key}

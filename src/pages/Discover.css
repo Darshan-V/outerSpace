@@ -1,0 +1,10 @@
+.DiscoverSongsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 57vh;
+    overflow: scroll;
+    margin: auto;
+}
+
+ 

@@ -26,7 +26,14 @@
 }
 
 .navLinks{
+    display: flex;
+    flex-direction: column;
     margin: 10px;
     box-shadow: 2px 5px 5px rgb(38, 79, 87);
+}
 
+.navItemClass{
+    border-bottom: groove gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

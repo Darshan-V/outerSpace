@@ -5,6 +5,7 @@ import './Sidebar.css'
 
 const links = [
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
+  { name: 'Discover', to: '/', icon: HiOutlineHashtag },
 ]
 
 const NavLinks = ({ handleClick }) => (

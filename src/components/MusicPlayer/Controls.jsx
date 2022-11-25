@@ -7,6 +7,7 @@ import {
   BsShuffle,
 } from 'react-icons/bs'
 import './Controls.css'
+
 const Controls = ({
   isPlaying,
   repeat,
