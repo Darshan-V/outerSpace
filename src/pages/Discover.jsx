@@ -1,10 +1,10 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { Loader, SongCard } from '../components/index'
+import { Loader, SongCard } from '../components'
 import { selectGenreListId } from '../reducers/features/playerFilter'
 import { useGetSongByGenreQuery } from '../reducers/services/shazamservice'
-import { genres } from '../assets/utils'
+import { genres } from '../assets/constants.js'
 import './Discover.css'
 
 const Discover = () => {
@@ -12,11 +12,11 @@ const Discover = () => {
   const { genreListId } = useSelector((state) => state.player)
   const { activeSong, isPlaying } = useSelector((state) => state.player)
 
-  const { data, isFetching } = useGetSongByGenreQuery
+  const { data, isFetching } = useGetSongByGenreQuery(genreListId || 'POP')
 
   if (isFetching) return <Loader title="Loading Top Charts" />
 
-  const genreTitle = genres.find(({ value }) => value === genreListId).title
+  const genreTitle = genres.find(({ value }) => value === genreListId)?.title
 
   return (
     <div className="Discover">
@@ -25,7 +25,7 @@ const Discover = () => {
 
         <select
           onChange={(e) => dispatch(selectGenreListId(e.target.value))}
-          value={genreListId || 'pop'}
+          value={genreListId || 'POP'}
           className="genreSelector"
         >
           {genres.map((genre) => (

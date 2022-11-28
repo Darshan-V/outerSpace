@@ -1,10 +1,25 @@
-.DiscoverSongsContainer{
+.Discover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 57vh;
     overflow: scroll;
-    margin: auto;
+    margin: 20px;
+    width: 1200px;
+    align-content: stretch;
+    align-items: stretch;
 }
 
+.genreSelector{
+    height: 30px;
+    width: 140px;
+    font-size: 1.25em;
+    margin-left: 1050px;
+}
+
+h2{
+    color:white;
+    font-weight: bolder;
+    font-style: italic;
+}
  
