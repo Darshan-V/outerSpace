@@ -1,39 +1,38 @@
-.sideBar{
-    width: 300px;
-    border: groove;
-    background-color: rgb(22, 46, 51);
-    height: 70vh;
+.sideBar {
+  width: 300px;
+  border: groove;
+  background-color: rgb(22, 46, 51);
+  height: 70vh;
 }
 
-.sideBar h2{
-    color: aliceblue;
-    margin:auto;
-    padding: 20px;
-    border-bottom:groove rgb(149, 144, 144)  ;
-    box-shadow: 2px 5px 5px gray;
-
+.sideBar h2 {
+  color: aliceblue;
+  margin: auto;
+  padding: 20px;
+  border-bottom: groove rgb(149, 144, 144);
+  box-shadow: 2px 5px 5px gray;
 }
-.navItemName{
-    color: aliceblue;
-}
-
-.navItemClass{
-    color: white;
-    font-size: 1.5em;
-    font-style: italic;
-    font-weight: bolder;
-    text-decoration: none;
+.navItemName {
+  color: aliceblue;
 }
 
-.navLinks{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    box-shadow: 2px 5px 5px rgb(38, 79, 87);
+.navItemClass {
+  color: white;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bolder;
+  text-decoration: none;
 }
 
-.navItemClass{
-    border-bottom: groove gray;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: 2px 5px 5px rgb(38, 79, 87);
+}
+
+.navItemClass {
+  border-bottom: groove gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -1,13 +1,13 @@
-.playIcon{
-    padding-top: 10px;
-    font-size: 1.5em;
-    color: rgb(74 177 141);
-    margin:3px;
+.playIcon {
+  padding-top: 10px;
+  font-size: 1.5em;
+  color: rgb(74 177 141);
+  margin: 3px;
 }
 
-.pauseIcon{
-    font-size: 1.5em;
-    color: rgb(74 177 141);
-    margin: 3px;
-    padding-top: 10px;
+.pauseIcon {
+  font-size: 1.5em;
+  color: rgb(74 177 141);
+  margin: 3px;
+  padding-top: 10px;
 }

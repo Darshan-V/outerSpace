@@ -1,37 +1,37 @@
-.Discover{
-    display: flex;
-    flex-direction: column;
-    height: 35vh;
-    overflow-x: auto;
-    overflow-y: hidden;
+.Discover {
+  display: flex;
+  flex-direction: column;
+  height: 35vh;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
-.discoverGenres{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 4px;
-    margin-bottom: 10px;
+.discoverGenres {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
 
-.genreSelector{
-    height: 30px;
-    width: 140px;
-    font-size: 1.25em;
+.genreSelector {
+  height: 30px;
+  width: 140px;
+  font-size: 1.25em;
 }
 
-h2{
-    color:white;
-    font-weight: bolder;
-    font-style: italic;
+h2 {
+  color: white;
+  font-weight: bolder;
+  font-style: italic;
 }
- 
-.discoveredSongCard{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    overflow-x: scroll;
-    flex-direction: row;
+
+.discoveredSongCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow-x: scroll;
+  flex-direction: row;
 }

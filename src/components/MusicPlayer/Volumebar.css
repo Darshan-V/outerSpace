@@ -1,9 +1,7 @@
-.volumeBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    color: white;
-    font-size: 2em;
+.volumeBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: white;
+  font-size: 2em;
 }
-
-
