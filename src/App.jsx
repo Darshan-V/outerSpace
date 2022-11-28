@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 
 import { MusicPlayer, Searchbar, Sidebar } from './components/index'
-import { TopCharts, Search, Discover } from './pages'
+import { TopCharts, Search, Discover, ArtistDetails } from './pages'
 import './App.css'
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Discover />} />
                 <Route path="/top-charts" element={<TopCharts />} />
+                <Route path="/artists/:id" element={<ArtistDetails />} />
                 <Route path="/search/:searchTerm" element={<Search />} />
               </Routes>
             </div>

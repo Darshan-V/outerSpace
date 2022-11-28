@@ -1,5 +1,6 @@
 import React from 'react'
 import PlayPause from './PlayPause'
+import { Link } from 'react-router-dom'
 
 const Songbar = ({
   song,
