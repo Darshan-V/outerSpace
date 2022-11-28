@@ -1,12 +1,19 @@
 .songCardContainer{
     display: flex;
     flex-direction: row;
+    width: 540px;
+    height: 100px;
+    padding: 4px;
     border-bottom: groove;
-    padding: 15px;
-    max-width: 400px;
-    min-width: 100%;
-    margin: 5px;
     background: radial-gradient(circle at 24.1% 68.8%, rgb(93, 92, 92) 0%, rgb(37, 46, 80) 99.4%);
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.songCardContainer:hover{
+    box-shadow: 2px 5px 5px rgb(77, 155, 171);
 }
 
 img{
@@ -17,11 +24,14 @@ img{
 .song{
     display: flex;
     flex-direction: row;
+    height: 60px;
 }
 
 .songMeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     font-style: italic;
-    padding-left: 10px;
 }
 
 .songMeta p {

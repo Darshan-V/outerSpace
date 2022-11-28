@@ -12,10 +12,11 @@ const Songbar = ({
   handlePlayClick,
 }) => {
   return (
-    <div className="SongbarforActiveSong">
-      <div className="songImage">
+    <div className="songBarContainer">
+      <h3 className="songList">{i + 1}.</h3>
+      <div className="songs">
         <img
-          className="songImg"
+          className="w-20 h-20 rounded-lg"
           src={
             artistId
               ? song.attributes.artwork.url
@@ -25,28 +26,28 @@ const Songbar = ({
           }
           alt={song.title}
         />
-        <div className="Artist">
+        <div className="ArtistLink">
           {!artistId ? (
-            <Link to={`songs/${song.key}`}>
-              <p className="songTitle">{song.title}</p>
+            <Link to={`/songs/${song.key}`}>
+              <p className="songname">{song.title}</p>
             </Link>
           ) : (
-            <p className="SongAltTitle">{song.attributes.name}</p>
+            <p className="songname">{song.attributes.name}</p>
           )}
-          <p className="songMeta">
+          <p className="text-base text-gray-300 mt-1">
             {artistId ? song.attributes.albumName : song.subtitle}
           </p>
         </div>
       </div>
-      {
+      {!artistId ? (
         <PlayPause
           isPlaying={isPlaying}
           activeSong={activeSong}
           song={song}
-          handlePause={handlePauseClick}
+          handlePause={() => handlePauseClick(song, i)}
           handlePlay={() => handlePlayClick(song, i)}
         />
-      }
+      ) : null}
     </div>
   )
 }

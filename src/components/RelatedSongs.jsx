@@ -9,20 +9,22 @@ const RelatedSongs = ({
   handlePauseClick,
   handlePlayClick,
 }) => {
+  console.log(data)
+
   return (
     <div className="relatedSongsContainer">
       <h1 className="relatedSongsHead">RelatedSongs:</h1>
       <div className="relatedSongbar">
-        {data.map((song, i) => (
+        {data?.map((song, i) => (
           <Songbar
-            key={`${artistId}-${song.key}-${i}`}
+            key={`${song.key}-${artistId}-${i}`}
             song={song}
             i={i}
-            artistId={artistId}
             isPlaying={isPlaying}
             activeSong={activeSong}
-            handlePlayClick={handlePlayClick}
+            artistId={artistId}
             handlePauseClick={handlePauseClick}
+            handlePlayClick={handlePlayClick}
           />
         ))}
       </div>

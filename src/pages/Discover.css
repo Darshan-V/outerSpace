@@ -1,20 +1,23 @@
 .Discover{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 57vh;
+    height: 61.5vh;
     overflow: scroll;
-    margin: 20px;
-    width: 1200px;
-    align-content: stretch;
-    align-items: stretch;
+}
+
+.discoverGenres{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 4px;
+    margin-bottom: 10px;
 }
 
 .genreSelector{
     height: 30px;
     width: 140px;
     font-size: 1.25em;
-    margin-left: 1050px;
 }
 
 h2{
@@ -23,3 +26,10 @@ h2{
     font-style: italic;
 }
  
+.discoveredSongCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
