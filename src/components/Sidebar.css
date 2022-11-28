@@ -6,10 +6,13 @@
 }
 
 .sideBar h2 {
-  color: aliceblue;
+  color: white;
   margin: auto;
   padding: 20px;
   border-bottom: groove rgb(149, 144, 144);
+  background-image: url('./19333449.jpg');
+  background-position: center;
+  background-size: 170px;
   box-shadow: 2px 5px 5px gray;
 }
 .navItemName {
@@ -18,7 +21,8 @@
 
 .navItemClass {
   color: white;
-  font-size: 1.5em;
+  width: 100%;
+  font-size: 1em;
   font-style: italic;
   font-weight: bolder;
   text-decoration: none;

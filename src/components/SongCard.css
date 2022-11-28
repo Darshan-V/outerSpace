@@ -1,8 +1,10 @@
 .songCardContainer {
   display: flex;
   flex-direction: row;
-  width: 540px;
-  height: 100px;
+  min-width: 540px;
+  min-height: 100px;
+  max-width: 540px;
+  max-height: 100px;
   padding: 4px;
   border-bottom: groove;
   background: radial-gradient(

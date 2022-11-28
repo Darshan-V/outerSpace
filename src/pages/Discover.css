@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 35vh;
-  overflow-x: auto;
   overflow-y: hidden;
+  margin: 20px;
 }
 
 .discoverGenres {
@@ -11,7 +11,7 @@
   width: 100%;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 4px;
+  margin-top: 5px;
   margin-bottom: 10px;
 }
 
@@ -29,9 +29,13 @@ h2 {
 
 .discoveredSongCard {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
+  width: 1650px;
+  height: 20vh;
   overflow-x: scroll;
+  overflow-y: hidden;
   flex-direction: row;
 }

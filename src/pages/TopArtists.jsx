@@ -1,6 +1,7 @@
 import React from 'react'
 import { ArtistCard, Loader } from '../components'
 import { useGetTopChartsQuery } from '../reducers/services/shazamservice'
+import './TopArtists.css'
 
 const TopArtists = () => {
   const { data, isFetching } = useGetTopChartsQuery()
