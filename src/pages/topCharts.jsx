@@ -15,7 +15,7 @@ const TopCharts = () => {
     <div className="topCharts">
       <h2 className="topchartsLabel">Discover Top Charts</h2>
 
-      <div className="songsContainer">
+      <div className="topChartsSongsContainer">
         {data.map((song, i) => (
           <SongCard
             key={song.key}

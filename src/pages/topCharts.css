@@ -1,6 +1,6 @@
 .topCharts{
     display: flex;
-    height: 70vh;
+    height: 60.5vh;
     overflow: hidden;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@
     margin: 30px;
 }
 
-.songsContainer{
+.topChartsSongsContainer{
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,8 +1,9 @@
 .Discover{
     display: flex;
     flex-direction: column;
-    height: 61.5vh;
-    overflow: scroll;
+    height: 35vh;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .discoverGenres{
@@ -31,5 +32,6 @@ h2{
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: stretch;
-
+    overflow-x: scroll;
+    flex-direction: row;
 }
