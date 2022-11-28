@@ -1,11 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { HiOutlineHashtag } from 'react-icons/hi'
+import {
+  HiOutlineHashtag,
+  HiOutlineHome,
+  HiOutlineUserGroup,
+} from 'react-icons/hi'
 import './Sidebar.css'
 
 const links = [
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
-  { name: 'Discover', to: '/', icon: HiOutlineHashtag },
+  { name: 'Discover', to: '/', icon: HiOutlineHome },
+  { name: 'Top Artists', to: '/top-artists', icon: HiOutlineUserGroup },
 ]
 
 const NavLinks = ({ handleClick }) => (

@@ -38,7 +38,7 @@ const Songbar = ({
           </p>
         </div>
       </div>
-      {!artistId ? (
+      {
         <PlayPause
           isPlaying={isPlaying}
           activeSong={activeSong}
@@ -46,7 +46,7 @@ const Songbar = ({
           handlePause={handlePauseClick}
           handlePlay={() => handlePlayClick(song, i)}
         />
-      ) : null}
+      }
     </div>
   )
 }
