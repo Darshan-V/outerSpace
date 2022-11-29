@@ -1,8 +1,9 @@
 .playIcon {
   padding-top: 10px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: rgb(74 177 141);
-  margin: 3px;
+  margin: 5px;
+  /* display: none; */
 }
 
 .pauseIcon {
