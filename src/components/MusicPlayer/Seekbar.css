@@ -4,6 +4,7 @@
   align-items: baseline;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 15px;
 }
 .seekButton {
   border: none;

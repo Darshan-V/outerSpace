@@ -1,9 +1,10 @@
 .relatedSongsContainer {
+  border-top: groove gray;
   display: flex;
   flex-direction: column;
   width: 1650px;
-  margin: 20px;
-  height: 60vh;
+  margin: auto;
+  height: 56vh;
   overflow: scroll;
 }
 

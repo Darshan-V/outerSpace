@@ -46,6 +46,8 @@
 .artistProfile {
   display: flex;
   flex-direction: row;
+  margin: auto;
+  padding-left: 20px;
 }
 
 .artistData {

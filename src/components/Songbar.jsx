@@ -34,7 +34,7 @@ const Songbar = ({
           ) : (
             <p className="songname">{song.attributes.name}</p>
           )}
-          <p className="text-base text-gray-300 mt-1">
+          <p className="songMeta">
             {artistId ? song.attributes.albumName : song.subtitle}
           </p>
         </div>

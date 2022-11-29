@@ -10,8 +10,6 @@ const RelatedSongs = ({
   handlePauseClick,
   handlePlayClick,
 }) => {
-  console.log(data)
-
   return (
     <div className="relatedSongsContainer">
       <h2 className="relatedSongsHead">Related Songs:</h2>
@@ -24,8 +22,8 @@ const RelatedSongs = ({
             isPlaying={isPlaying}
             activeSong={activeSong}
             artistId={artistId}
-            handlePauseClick={handlePauseClick}
-            handlePlayClick={handlePlayClick}
+            handlePause={handlePauseClick}
+            handlePlay={handlePlayClick}
           />
         ))}
       </div>

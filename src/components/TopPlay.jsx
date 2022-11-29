@@ -8,7 +8,6 @@ import './Topplay.css'
 
 const TopChartCard = ({
   song,
-  i,
   isPlaying,
   activeSong,
   handlePauseClick,
@@ -48,7 +47,8 @@ const TopPlay = () => {
 
   const topPlays = data?.slice(0, 5)
 
-  const handlePauseClick = () => {
+  const handlePauseClick = (song, i) => {
+    dispatch(setActiveSong({ song, data, i }))
     dispatch(playPause(false))
   }
 

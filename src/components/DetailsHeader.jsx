@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
+  console.log(songData)
   return (
     <div className="detailsHeader">
       <div className="profiles" />

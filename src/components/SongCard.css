@@ -16,6 +16,7 @@
   margin: 5px;
   border-radius: 10px;
   cursor: pointer;
+  scroll-snap-align: center;
 }
 
 .songCardContainer:hover {

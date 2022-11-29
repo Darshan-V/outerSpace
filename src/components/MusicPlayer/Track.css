@@ -5,6 +5,7 @@
   border-right: groove rgb(33, 50, 99);
   padding-right: 30px;
   max-width: 200px;
+  max-height: 200px;
 }
 
 .trackCover {
@@ -22,8 +23,14 @@
 }
 
 p {
+  max-height: 30px;
   margin: 0;
   padding: 0;
-  color: rgb(68, 68, 93);
+  color: rgba(252, 252, 253, 0.249);
   text-decoration: solid;
+  /* font-size: small; */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
