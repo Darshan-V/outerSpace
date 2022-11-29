@@ -1,0 +1,15 @@
+.relatedSongsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 1650px;
+  margin: 20px;
+  height: 60vh;
+  overflow: scroll;
+}
+
+.relatedSongbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: scroll;
+}

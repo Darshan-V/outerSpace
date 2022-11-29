@@ -1,0 +1,28 @@
+.songBarContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 4px;
+  border-bottom: groove;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(93, 92, 92) 0%,
+    rgb(37, 46, 80) 99.4%
+  );
+  align-items: center;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.songs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+.ArtistLink > p {
+  color: azure;
+  margin-left: 10px;
+}

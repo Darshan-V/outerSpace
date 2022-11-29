@@ -1,6 +1,7 @@
 import React from 'react'
 import PlayPause from './PlayPause'
 import { Link } from 'react-router-dom'
+import './Songbar.css'
 
 const Songbar = ({
   song,
@@ -13,10 +14,9 @@ const Songbar = ({
 }) => {
   return (
     <div className="songBarContainer">
-      <h3 className="songList">{i + 1}.</h3>
       <div className="songs">
         <img
-          className="w-20 h-20 rounded-lg"
+          className="songBarImage"
           src={
             artistId
               ? song.attributes.artwork.url

@@ -1,37 +1,63 @@
 .repeatButton {
+  font-size: 0.75em;
   color: cornflowerblue;
 }
+
 .playPrev {
+  font-size: 0.75em;
   color: darkslateblue;
 }
+
 .pause {
+  font-size: 0.75em;
   color: seagreen;
 }
+
 .play {
+  font-size: 1em;
   color: seagreen;
 }
+
 .playNext {
+  font-size: 0.75em;
   color: darkslateblue;
 }
+
 .shuffle {
+  font-size: 0.75em;
   color: steelblue;
 }
 
-.repeatButton:hover {
-  color: rgb(58, 121, 236);
+.repeatButton:focus {
+  outline: none;
+  color: red;
 }
+
 .playPrev:hover {
   color: rgb(89, 73, 194);
 }
+
 .pause:hover {
-  color: rgb(236, 162, 89);
+  color: rgba(62, 163, 64, 0.683);
+  filter: drop-shadow(0 0 2px rgba(62, 163, 64, 0.683))
+    drop-shadow(0 0 5px rgba(62, 163, 64, 0.683))
+    drop-shadow(0 0 15px rgba(62, 163, 64, 0.683));
 }
+
 .play:hover {
-  color: rgb(13, 91, 47);
+  color: rgba(62, 163, 64, 0.683);
+  filter: drop-shadow(0 0 2px rgba(62, 163, 64, 0.683))
+    drop-shadow(0 0 5px rgba(62, 163, 64, 0.683))
+    drop-shadow(0 0 15px rgba(62, 163, 64, 0.683));
 }
+
 .playNext:hover {
   color: rgb(89, 73, 194);
 }
-.shuffle:hover {
-  color: rgb(26, 56, 81);
+
+.shuffle:active {
+  color: rgb(220, 227, 233);
+  filter: drop-shadow(0 0 2px rgba(241, 243, 241, 0.683))
+    drop-shadow(0 0 5px rgba(240, 246, 240, 0.683))
+    drop-shadow(0 0 15px rgba(236, 240, 236, 0.683));
 }

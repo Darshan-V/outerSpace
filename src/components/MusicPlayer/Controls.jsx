@@ -21,6 +21,7 @@ const Controls = ({
 }) => (
   <div className="controllersContainer">
     <BsArrowRepeat
+      color={repeat ? 'green' : 'white'}
       onClick={() => setRepeat((prev) => !prev)}
       className="repeatButton"
     />
@@ -36,6 +37,7 @@ const Controls = ({
       <MdSkipNext className="playNext" onClick={handleNextSong} />
     )}
     <BsShuffle
+      color={shuffle ? 'green' : 'white'}
       onClick={() => setShuffle((prev) => !prev)}
       className="shuffle"
     />

@@ -6,8 +6,9 @@
   justify-content: space-between;
 }
 .seekButton {
-  border-radius: 20%;
+  border: none;
   height: 30px;
+  background-color: transparent;
 }
 
 .seekRange {

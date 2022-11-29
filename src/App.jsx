@@ -32,7 +32,6 @@ const App = () => {
                 <Route path="/search/:searchTerm" element={<Search />} />
               </Routes>
             </div>
-            <TopArtists />
           </div>
         </div>
       </div>

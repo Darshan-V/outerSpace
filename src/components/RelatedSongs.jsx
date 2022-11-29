@@ -1,5 +1,6 @@
 import React from 'react'
 import Songbar from './Songbar'
+import './RelatedSongs.css'
 
 const RelatedSongs = ({
   data,
@@ -13,7 +14,7 @@ const RelatedSongs = ({
 
   return (
     <div className="relatedSongsContainer">
-      <h1 className="relatedSongsHead">RelatedSongs:</h1>
+      <h2 className="relatedSongsHead">Related Songs:</h2>
       <div className="relatedSongbar">
         {data?.map((song, i) => (
           <Songbar

@@ -5,6 +5,7 @@ import { Loader, SongCard } from '../components'
 import { selectGenreListId } from '../reducers/features/playerFilter'
 import { useGetSongByGenreQuery } from '../reducers/services/shazamservice'
 import { genres } from '../assets/constants.js'
+import TopArtists from './TopArtists'
 import './Discover.css'
 
 const Discover = () => {
@@ -52,6 +53,7 @@ const Discover = () => {
           />
         ))}
       </div>
+      <TopArtists />
     </div>
   )
 }

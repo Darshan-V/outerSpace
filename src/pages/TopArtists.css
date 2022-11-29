@@ -42,3 +42,20 @@
   box-shadow: 2px 5px 5px rgb(57, 119, 131);
   border-radius: 5px;
 }
+
+.artistProfile {
+  display: flex;
+  flex-direction: row;
+}
+
+.artistData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artistData > p {
+  color: beige;
+  margin: 10px;
+  padding-left: 10px;
+}

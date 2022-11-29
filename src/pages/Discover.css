@@ -1,7 +1,7 @@
 .Discover {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  height: 60vh;
   overflow-y: hidden;
   margin: 20px;
 }
@@ -29,7 +29,7 @@ h2 {
 
 .discoveredSongCard {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
