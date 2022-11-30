@@ -25,7 +25,7 @@ const MusicPlayer = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (currentSongs.length) dispatch(playPause(true))
+    if (currentSongs?.length) dispatch(playPause(true))
     //eslint-disable-next-line
   }, [currentIndex])
 

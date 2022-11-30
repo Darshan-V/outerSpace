@@ -1,8 +1,8 @@
 import React from 'react'
+import Songbar from './Songbar'
 import './RelatedSongs.css'
-import SongCard from './SongCard'
 
-const RelatedSongs = ({
+const RelatedArtistsSongs = ({
   data,
   artistId,
   isPlaying,
@@ -15,7 +15,7 @@ const RelatedSongs = ({
       <h2 className="relatedSongsHead">Related Songs:</h2>
       <div className="relatedSongbar">
         {data?.map((song, i) => (
-          <SongCard
+          <Songbar
             key={`${song.key}-${artistId}-${i}`}
             song={song}
             i={i}
@@ -31,4 +31,4 @@ const RelatedSongs = ({
   )
 }
 
-export default RelatedSongs
+export default RelatedArtistsSongs

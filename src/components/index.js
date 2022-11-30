@@ -9,6 +9,7 @@ import ArtistCard from './ArtistCard'
 import DetailsHeader from './DetailsHeader'
 import Songbar from './Songbar'
 import RelatedSongs from './RelatedSongs'
+import RelatedArtistsSongs from './RelatedArtistsSongs'
 
 export {
   MusicPlayer,
@@ -22,4 +23,5 @@ export {
   DetailsHeader,
   Songbar,
   RelatedSongs,
+  RelatedArtistsSongs,
 }

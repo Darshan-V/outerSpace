@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
-  console.log(songData)
   return (
     <div className="detailsHeader">
       <div className="profiles" />
@@ -15,7 +14,7 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
               ? artistData.artists[artistId].attributes.artwork.url
                   .replace('{w}', '500')
                   .replace('{h}', '500')
-              : songData.images.coverart
+              : songData?.images?.coverart
           }
           className="artistImage"
         />
@@ -23,19 +22,19 @@ const DetailsHeader = ({ artistId, artistData, songData }) => {
         <div className="artistData">
           <p className="artistSongData">
             {artistId
-              ? artistData.artists[artistId].attributes.name
-              : songData.title}
+              ? artistData?.artists[artistId]?.attributes?.name
+              : songData?.title}
           </p>
           {!artistId && (
-            <Link to={`/artists/${songData.artists[0].adamid}`}>
-              <p className="artistSongData">{songData.subtitle}</p>
+            <Link to={`/artists/${songData?.artists[0]?.adamid}`}>
+              <p className="artistSongData">{songData?.subtitle}</p>
             </Link>
           )}
 
           <p className="artistSongText">
             {artistId
-              ? artistData.artists[artistId].attributes.genreNames[0]
-              : songData.genres.primary}
+              ? artistData?.artists[artistId]?.attributes?.genreNames[0]
+              : songData?.genres?.primary}
           </p>
         </div>
       </div>

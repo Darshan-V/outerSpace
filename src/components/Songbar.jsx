@@ -19,10 +19,10 @@ const Songbar = ({
           className="songBarImage"
           src={
             artistId
-              ? song.attributes.artwork.url
+              ? song?.attributes?.artwork?.url
                   .replace('{w}', '125')
                   .replace('{h}', '125')
-              : song.images.coverart
+              : song?.images?.coverart
           }
           alt={song.title}
         />

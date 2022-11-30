@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { DetailsHeader, Loader, RelatedSongs } from '../components'
+import { DetailsHeader, Loader, RelatedArtistsSongs } from '../components'
 
 import { useGetArtistDetailsQuery } from '../reducers/services/shazamservice'
 
@@ -18,7 +18,7 @@ const ArtistDetails = () => {
   return (
     <div className="ArtistDetailsContainer">
       <DetailsHeader artistId={artistId} artistData={artistData} />
-      <RelatedSongs
+      <RelatedArtistsSongs
         data={Object.values(artistData.songs)}
         artistId={artistId}
         isPlaying={isPlaying}
