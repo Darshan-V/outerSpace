@@ -3,22 +3,26 @@ import { useDispatch } from 'react-redux'
 
 import PlayPause from './PlayPause'
 import { playPause, setActiveSong } from '../reducers/features/playerFilter'
+import { RxDotsVertical } from 'react-icons/rx'
+
 import './SongCard.css'
 
 const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   const dispatch = useDispatch()
-
+  console.log(song)
   const handlePauseClick = () => {
     dispatch(playPause(false))
   }
 
   const handlePlayClick = () => {
-    dispatch(setActiveSong({ song, data, i }))
+    const currentSongs = data.tracks
+    dispatch(setActiveSong({ song, data, currentSongs, i }))
     dispatch(playPause(true))
   }
 
   return (
     <div className="songCardContainer">
+      <RxDotsVertical className="songMenuIcon" />
       <div className="song">
         <div className="songTitle">
           <PlayPause

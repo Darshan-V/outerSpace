@@ -1,8 +1,10 @@
 .sideBar {
-  width: 300px;
   border: groove rgba(0, 0, 0, 0.33);
   background-color: rgb(25, 47, 65);
   height: 75vh;
+  width: 300px;
+  flex-grow: 5;
+  flex-basis: 4;
 }
 
 .sideBar h2 {

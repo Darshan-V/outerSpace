@@ -4,6 +4,7 @@
   height: 60vh;
   overflow-y: hidden;
   margin: 20px;
+  flex-grow: 8;
 }
 
 .discoverGenres {
@@ -39,6 +40,7 @@ h2 {
   scroll-snap-type: x proximity;
   overflow-y: hidden;
   flex-direction: row;
+  flex-grow: 4;
 }
 
 .arrow {
