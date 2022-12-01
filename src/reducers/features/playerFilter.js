@@ -7,6 +7,7 @@ const initialState = {
   isPlaying: false,
   activeSong: {},
   genreListId: '',
+  likedSongs: {},
 }
 
 const playerSlice = createSlice({
@@ -57,6 +58,9 @@ const playerSlice = createSlice({
     selectGenreListId: (state, action) => {
       state.genreListId = action.payload
     },
+    likedList: (state, action) => {
+      state.likedSongs = action.likedSongs
+    },
   },
 })
 
@@ -66,6 +70,7 @@ export const {
   prevSong,
   playPause,
   selectGenreListId,
+  likedList,
 } = playerSlice.actions
 
 export default playerSlice.reducer
