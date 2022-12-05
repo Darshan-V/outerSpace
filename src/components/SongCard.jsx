@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import PlayPause from './PlayPause'
 import { playPause, setActiveSong } from '../reducers/features/playerFilter'
 import Dropdown from './Dropdown'
-import Element from './Element'
+import Element from './DropdownElement'
 
 import './SongCard.css'
 
@@ -15,8 +15,8 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   }
 
   const handlePlayClick = () => {
-    const currentSongs = data.tracks
-    dispatch(setActiveSong({ song, data, currentSongs, i }))
+    // const currentSongs = data.tracks
+    dispatch(setActiveSong({ song, data, i }))
     dispatch(playPause(true))
   }
 
@@ -42,18 +42,18 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
 
       <div className="songMeta">
         <p className="songHead">
-          <Link style={{ color: 'whitesmoke' }} to={`/songs/${song?.key}`}>
+          <Link to={`/songs/${song?.key}`} style={{ color: 'white' }}>
             {song.title}
           </Link>
         </p>
         <p className="songArtist">
           <Link
-            style={{ color: 'white' }}
             to={
               song.artists
                 ? `/artists/${song?.artists[0]?.adamid}`
                 : '/top-artists'
             }
+            style={{ color: 'white' }}
           >
             {song.subtitle}
           </Link>

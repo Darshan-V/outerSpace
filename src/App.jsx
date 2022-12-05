@@ -13,7 +13,7 @@ import {
 import './App.css'
 
 const App = () => {
-  const { activeSong } = useSelector((state) => state.player)
+  const activeSong = useSelector((state) => state.player.activeSong)
 
   return (
     <div className="OuterSpace">
@@ -25,7 +25,7 @@ const App = () => {
             <div>
               <Routes>
                 <Route path="/" element={<Discover />} />
-                <Route path="top-artists" element={<TopArtists />} />
+                <Route path="/top-artists" element={<TopArtists />} />
                 <Route path="/top-charts" element={<TopCharts />} />
                 <Route path="/artists/:id" element={<ArtistDetails />} />
                 <Route path="/songs/:songid" element={<SongDetails />} />

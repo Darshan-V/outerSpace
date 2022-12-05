@@ -26,7 +26,7 @@ p {
   max-height: 30px;
   margin: 0;
   padding: 0;
-  color: rgba(252, 252, 253, 0.249);
+  color: rgb(252, 252, 253);
   text-decoration: solid;
   /* font-size: small; */
   display: -webkit-box;

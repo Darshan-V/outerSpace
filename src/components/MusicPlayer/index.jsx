@@ -24,10 +24,10 @@ const MusicPlayer = () => {
   const [shuffle, setShuffle] = useState(false)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    if (currentSongs?.length) dispatch(playPause(true))
-    //eslint-disable-next-line
-  }, [currentIndex])
+  //?TODO: put it inside handleevents
+  // useEffect(() => {
+  //   if (currentSongs?.length) dispatch(playPause(true))
+  // }, [currentIndex])
 
   const handlePlayPause = () => {
     if (!isActive) return
@@ -40,7 +40,7 @@ const MusicPlayer = () => {
   }
 
   const handleNextSong = () => {
-    dispatch(playPause(false))
+    dispatch(playPause(true))
 
     if (!shuffle) {
       dispatch(nextSong((currentIndex + 1) % currentSongs.length))
@@ -58,7 +58,7 @@ const MusicPlayer = () => {
       dispatch(prevSong(currentIndex - 1))
     }
   }
-
+  //TODO diff? passing props to child and using usedispatch to store in redux
   return (
     <div className="mainContainer">
       <Track
