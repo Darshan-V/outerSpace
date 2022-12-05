@@ -2,8 +2,7 @@
   border-top: groove gray;
   display: flex;
   flex-direction: column;
-  width: 1650px;
-  margin: auto;
+  width: 100%;
   height: 56vh;
   overflow: scroll;
 }
@@ -13,9 +12,14 @@
   flex-direction: column;
   width: 100%;
   overflow: scroll;
+  flex-grow: 2;
 }
 
 .relatedSongbar .songCardContainer {
   display: flex;
   width: 100%;
+}
+
+.relatedSongsHead {
+  color: white;
 }

@@ -12,11 +12,13 @@
   align-items: center;
   margin: 5px;
   border-radius: 10px;
+  flex: auto;
 }
 
 .songs {
   display: flex;
   flex-direction: row;
+  flex: auto;
   justify-content: flex-start;
   margin: auto;
   width: 100%;

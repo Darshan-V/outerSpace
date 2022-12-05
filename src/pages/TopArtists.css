@@ -1,15 +1,22 @@
 .topArtistsPage {
   display: flex;
   flex-direction: column;
-  width: 1650px;
+  width: 100%;
   margin-top: 10px;
+  flex-grow: 2;
+  max-height: 30vh;
 }
 
 .ArtistCardContainer {
   display: flex;
   flex-direction: row;
+  height: 20vh;
   width: 100%;
   overflow: scroll;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 2;
+  justify-content: center;
 }
 .artistCard {
   display: flex;

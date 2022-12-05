@@ -1,10 +1,10 @@
 .sideBar {
-  border: groove rgba(0, 0, 0, 0.33);
+  border-right: groove rgba(0, 0, 0, 0.33);
   background-color: rgb(25, 47, 65);
   height: 75vh;
   width: 300px;
-  flex-grow: 5;
-  flex-basis: 4;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .sideBar h2 {
@@ -15,7 +15,6 @@
   background-image: url('./19333449.jpg');
   background-position: center;
   background-size: 170px;
-  box-shadow: 2px 5px 5px gray;
 }
 .navItemName {
   color: aliceblue;

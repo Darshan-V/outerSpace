@@ -13,6 +13,7 @@
     rgb(16, 37, 60) 51.2%,
     rgb(0, 0, 0) 98.6%
   );
+  flex: auto;
 }
 .topPlays {
   display: flex;
@@ -72,7 +73,6 @@
 }
 .topArtistsHead {
   color: thistle;
-  box-shadow: 2px 5px 5px rgb(27, 76, 85);
 }
 .topArtistsPeople {
   display: flex;

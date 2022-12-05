@@ -28,9 +28,14 @@ html {
     rgb(0, 0, 0) 98.6%
   );
 }
-
+.routes {
+  overflow: hidden;
+  flex-grow: 4;
+}
 .routerDiv {
+  width: 100%;
   overflow-x: hidden;
+  flex-grow: 2;
 }
 
 * {

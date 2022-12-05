@@ -23,12 +23,6 @@ const Discover = () => {
     <div className="Discover">
       <div className="discoverGenres">
         <h2 className="topchartsLabel">Discover {genreTitle}</h2>
-        <div className="leftArrow">
-          <i className="arrow left"></i>
-        </div>
-        <div className="rightArrow">
-          <i className="arrow right"></i>
-        </div>
         <select
           onChange={(e) => dispatch(selectGenreListId(e.target.value))}
           value={genreListId || 'POP'}
