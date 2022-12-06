@@ -1,23 +1,27 @@
 import React, { useState } from 'react'
 import { writeLikedSongs } from './custom'
 
-const Element = ({ song, i }) => {
+const Element = ({ song, index }) => {
   const [likedSong, setLikedSong] = useState({})
 
-  const [saveCustom, setSaveCustom] = useState({})
   function handleLike() {
-    setLikedSong(song, i)
+    setLikedSong(song, index)
   }
-  function handleSaveCustom() {
-    setSaveCustom(song, i)
-  }
+
   return (
     <div style={{ background: 'white' }}>
       <div>
         <div
+          i={index}
           onClick={() => {
             handleLike()
-            writeLikedSongs(likedSong)
+            writeLikedSongs({
+              key: likedSong.key,
+              url: likedSong.url,
+              sub: likedSong.subtitle,
+              title: likedSong.title,
+              images: likedSong.images,
+            })
           }}
         >
           Like

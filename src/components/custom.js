@@ -10,4 +10,14 @@ async function writeLikedSongs(song) {
   return likedSongs
 }
 
-export { writeLikedSongs }
+async function getLikedSongs() {
+  let savedSongs = await fetch('http://localhost:5000', {
+    method: 'GET',
+  })
+
+  return savedSongs
+}
+
+// export const savedSongs = await getLikedSongs()
+
+export { writeLikedSongs, getLikedSongs }
