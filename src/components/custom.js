@@ -11,9 +11,11 @@ async function writeLikedSongs(song) {
 }
 
 async function getLikedSongs() {
-  let savedSongs = await fetch('http://localhost:5000', {
-    method: 'GET',
-  })
+  let savedSongs = await (
+    await fetch('http://localhost:5000', {
+      method: 'GET',
+    })
+  ).json()
 
   return savedSongs
 }

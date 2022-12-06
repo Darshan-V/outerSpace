@@ -4,6 +4,7 @@ import {
   HiOutlineHashtag,
   HiOutlineHome,
   HiOutlineUserGroup,
+  HiOutlineHeart,
 } from 'react-icons/hi'
 import './Sidebar.css'
 
@@ -11,6 +12,7 @@ const links = [
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
   { name: 'Discover', to: '/', icon: HiOutlineHome },
   { name: 'Top Artists', to: '/top-artists', icon: HiOutlineUserGroup },
+  { name: 'Liked Songs', to: '/my-playlist', icon: HiOutlineHeart },
 ]
 
 const NavLinks = ({ handleClick }) => (
