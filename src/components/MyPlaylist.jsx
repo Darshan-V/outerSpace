@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { getLikedSongs } from './custom'
 import SongCard from './SongCard'
 
-const MyPlaylist = (
-  isPlaying,
-  activeSong,
-  handlePauseClick,
-  handlePlayClick
-) => {
+import { useSelector } from 'react-redux'
+
+const MyPlaylist = (handlePauseClick, handlePlayClick) => {
   const [likedSong, setLikedSong] = useState()
+
+  const { activeSong, isPlaying } = useSelector((state) => state.player)
 
   const extractSongs = async () => {
     let mySongs = await getLikedSongs()
@@ -28,8 +27,6 @@ const MyPlaylist = (
           song={song?.data?.song}
           isPlaying={isPlaying}
           activeSong={activeSong}
-          handlePauseClick={handlePauseClick}
-          handlePlayClick={handlePlayClick}
         />
       ))}
     </div>
