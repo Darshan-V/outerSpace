@@ -14,6 +14,12 @@ export function addSong(song) {
 }
 
 export async function getLikedSongs() {
-  const likedSongs = await model.find({})
+  const likedSongs = await model.aggregate([
+    {
+      $match: {
+        data: { $exists: true },
+      },
+    },
+  ])
   return likedSongs
 }
