@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { getLikedSongs } from './custom'
+import SongCard from './SongCard'
 
-const MyPlaylist = () => {
-  const [likedSong, setLikedSong] = useState({})
+const MyPlaylist = (
+  isPlaying,
+  activeSong,
+  handlePauseClick,
+  handlePlayClick
+) => {
+  const [likedSong, setLikedSong] = useState()
 
   const extractSongs = async () => {
     let mySongs = await getLikedSongs()
@@ -12,9 +18,22 @@ const MyPlaylist = () => {
 
   useEffect(() => {
     extractSongs()
-  })
+  }, [])
 
-  return <div></div>
+  return (
+    <div className="myPlaylist">
+      {likedSong?.map((song) => (
+        <SongCard
+          key={song?.data?.song?.key}
+          song={song?.data?.song}
+          isPlaying={isPlaying}
+          activeSong={activeSong}
+          handlePauseClick={handlePauseClick}
+          handlePlayClick={handlePlayClick}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default MyPlaylist

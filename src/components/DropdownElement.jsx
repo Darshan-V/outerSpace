@@ -16,11 +16,7 @@ const Element = ({ song, index }) => {
           onClick={() => {
             handleLike()
             writeLikedSongs({
-              key: likedSong.key,
-              url: likedSong.url,
-              sub: likedSong.subtitle,
-              title: likedSong.title,
-              images: likedSong.images,
+              song: likedSong,
             })
           }}
         >
