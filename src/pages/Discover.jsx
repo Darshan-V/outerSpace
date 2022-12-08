@@ -6,7 +6,7 @@ import { selectGenreListId } from '../reducers/features/playerFilter'
 import { useGetSongByGenreQuery } from '../reducers/services/shazamservice'
 import { genres } from '../assets/constants.js'
 import TopArtists from './TopArtists'
-import './Discover.css'
+import DiscoverStyles from './Discover.module.css'
 
 const Discover = () => {
   const dispatch = useDispatch()
@@ -20,22 +20,25 @@ const Discover = () => {
   const genreTitle = genres.find(({ value }) => value === genreListId)?.title
 
   return (
-    <div className="Discover">
-      <div className="discoverGenres">
-        <h2 className="topchartsLabel">Discover {genreTitle}</h2>
-        <select
-          onChange={(e) => dispatch(selectGenreListId(e.target.value))}
-          value={genreListId || 'POP'}
-          className="genreSelector"
-        >
-          {genres.map((genre) => (
-            <option key={genre.value} value={genre.value}>
-              {genre.title}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="discoveredSongCard">
+    <div className={DiscoverStyles.Discover}>
+      <TopArtists />
+      <div className={DiscoverStyles.discoveredSongCard}>
+        <div className={DiscoverStyles.discoverGenres}>
+          <h2 className={DiscoverStyles.topchartsLabel}>
+            Discover {genreTitle}
+          </h2>
+          <select
+            className={DiscoverStyles.genreSelector}
+            onChange={(e) => dispatch(selectGenreListId(e.target.value))}
+            value={genreListId || 'POP'}
+          >
+            {genres.map((genre) => (
+              <option key={genre.value} value={genre.value}>
+                {genre.title}
+              </option>
+            ))}
+          </select>
+        </div>
         {data.map((song, i) => (
           <SongCard
             key={song.key}
@@ -47,7 +50,6 @@ const Discover = () => {
           />
         ))}
       </div>
-      <TopArtists />
     </div>
   )
 }

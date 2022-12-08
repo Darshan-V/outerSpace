@@ -1,6 +1,6 @@
 import React from 'react'
 import Songbar from './Songbar'
-import './RelatedSongs.css'
+// import './RelatedSongs.css'
 
 const RelatedArtistsSongs = ({
   data,

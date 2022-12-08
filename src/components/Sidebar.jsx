@@ -6,7 +6,7 @@ import {
   HiOutlineUserGroup,
   HiOutlineHeart,
 } from 'react-icons/hi'
-import './Sidebar.css'
+import SidebarStyle from './Sidebar.module.css'
 
 const links = [
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
@@ -16,15 +16,15 @@ const links = [
 ]
 
 const NavLinks = ({ handleClick }) => (
-  <div className="navLinks">
+  <div className={SidebarStyle.navLinks}>
     {links.map((item) => (
       <NavLink
         key={item.name}
         to={item.to}
-        className="navItemClass"
+        className={SidebarStyle.navItemClass}
         onClick={() => handleClick && handleClick()}
       >
-        <item.icon className="navItemName" />
+        <item.icon className={SidebarStyle.navItemName} />
         {item.name}
       </NavLink>
     ))}
@@ -34,7 +34,7 @@ const NavLinks = ({ handleClick }) => (
 const Sidebar = () => {
   return (
     <>
-      <div className="sideBar">
+      <div className={SidebarStyle.sideBar}>
         <h2>OuterSpace</h2>
         <NavLinks />
       </div>

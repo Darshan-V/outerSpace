@@ -6,39 +6,37 @@
 }
 
 .home {
+  width: 100%;
+  height: 100%;
+  margin: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  margin: auto;
-  padding: 10px;
   background: linear-gradient(
     109.6deg,
     rgb(36, 45, 57) 11.2%,
     rgb(16, 37, 60) 51.2%,
     rgb(0, 0, 0) 98.6%
   );
-  max-height: 80vh;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
 }
 
-html {
-  background: linear-gradient(
-    109.6deg,
-    rgb(36, 45, 57) 11.2%,
-    rgb(16, 37, 60) 51.2%,
-    rgb(0, 0, 0) 98.6%
-  );
+body {
+  padding: 0;
+  margin: 0;
 }
+
 .routes {
   overflow: hidden;
-  flex-grow: 4;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
 }
 .routerDiv {
+  display: flex;
   width: 100%;
   overflow-x: hidden;
   flex-grow: 2;
-}
-
-* {
-  margin: 0;
 }

@@ -3,8 +3,8 @@
   background-color: rgb(25, 47, 65);
   height: 75vh;
   width: 300px;
-  flex-grow: 0;
-  flex-shrink: 0;
+  flex-grow: 2;
+  flex-shrink: 1;
 }
 
 .sideBar h2 {

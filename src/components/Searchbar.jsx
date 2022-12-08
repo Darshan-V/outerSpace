@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { useNavigate } from 'react-router-dom'
-import './Searchbar.css'
+import SearchBarStyle from './Searchbar.module.css'
 
 function Searchbar() {
   const navigate = useNavigate()
@@ -11,13 +11,13 @@ function Searchbar() {
     navigate(`/search/${searchTerm}`)
   }
   return (
-    <form onSubmit={handleSubmit} className="searchForm">
-      <div className="searchBarContainer">
-        <FiSearch aria-hidden="true" className="searchIcon" />
+    <form onSubmit={handleSubmit} className={SearchBarStyle.searchForm}>
+      <div className={SearchBarStyle.searchBarContainer}>
+        <FiSearch aria-hidden="true" className={SearchBarStyle.searchIcon} />
         <input
           name="search-field"
           id="search-field"
-          className="searchInput"
+          className={SearchBarStyle.searchInput}
           placeholder="Search all files"
           type="search"
           value={searchTerm}

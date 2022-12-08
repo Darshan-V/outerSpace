@@ -4,7 +4,7 @@ import SongCard from './SongCard'
 
 import { useSelector } from 'react-redux'
 
-const MyPlaylist = (handlePauseClick, handlePlayClick) => {
+const MyPlaylist = () => {
   const [likedSong, setLikedSong] = useState()
 
   const { activeSong, isPlaying } = useSelector((state) => state.player)

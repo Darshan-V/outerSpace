@@ -6,7 +6,7 @@ import { playPause, setActiveSong } from '../reducers/features/playerFilter'
 import Dropdown from './Dropdown'
 import Element from './DropdownElement'
 
-import './SongCard.css'
+import SongcardStyle from './SongCard.module.css'
 
 const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   const dispatch = useDispatch()
@@ -21,14 +21,14 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   }
 
   return (
-    <div className="songCardContainer">
-      <div className="songMenu">
+    <div className={SongcardStyle.songCardContainer}>
+      <div className={SongcardStyle.songMenu}>
         <Dropdown>
           <Element song={song} />
         </Dropdown>
       </div>
-      <div className="song">
-        <div className="songTitle">
+      <div className={SongcardStyle.song}>
+        <div className={SongcardStyle.songTitle}>
           <PlayPause
             isPlaying={isPlaying}
             activeSong={activeSong}
@@ -40,13 +40,13 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
         <img alt="song_img" src={song?.images?.coverart} />
       </div>
 
-      <div className="songMeta">
-        <p className="songHead">
+      <div className={SongcardStyle.songMeta}>
+        <p className={SongcardStyle.songHead}>
           <Link to={`/songs/${song?.key}`} style={{ color: 'white' }}>
             {song.title}
           </Link>
         </p>
-        <p className="songArtist">
+        <p className={SongcardStyle.songArtist}>
           <Link
             to={
               song.artists

@@ -1,7 +1,7 @@
 import React from 'react'
 import PlayPause from './PlayPause'
 import { Link } from 'react-router-dom'
-import './Songbar.css'
+import SongBarStyle from './Songbar.module.css'
 
 const Songbar = ({
   song,
@@ -13,10 +13,10 @@ const Songbar = ({
   handlePlayClick,
 }) => {
   return (
-    <div className="songBarContainer">
-      <div className="songs">
+    <div className={SongBarStyle.songBarContainer}>
+      <div className={SongBarStyle.songs}>
         <img
-          className="songBarImage"
+          className={SongBarStyle.songBarImage}
           src={
             artistId
               ? song?.attributes?.artwork?.url
@@ -26,15 +26,15 @@ const Songbar = ({
           }
           alt={song.title}
         />
-        <div className="ArtistLink">
+        <div className={SongBarStyle.ArtistLink}>
           {!artistId ? (
             <Link to={`/songs/${song.key}`}>
-              <p className="songname">{song.title}</p>
+              <p className={SongBarStyle.songname}>{song.title}</p>
             </Link>
           ) : (
-            <p className="songname">{song.attributes.name}</p>
+            <p className={SongBarStyle.songname}>{song.attributes.name}</p>
           )}
-          <p className="songMeta">
+          <p className={SongBarStyle.songMeta}>
             {artistId ? song.attributes.albumName : song.subtitle}
           </p>
         </div>

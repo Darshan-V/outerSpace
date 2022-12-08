@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Loader, SongCard } from '../components'
 import { useGetSongsBySearchQuery } from '../reducers/services/shazamservice'
-import './Search.css'
+import SearchStyle from './Search.module.css'
 
 const Search = () => {
   const { searchTerm } = useParams()
@@ -15,12 +15,12 @@ const Search = () => {
   if (isFetching) return <Loader title={`Searching ${searchTerm}...`} />
 
   return (
-    <div className="searchDiv">
-      <h2 className="searchHead">
+    <div className={SearchStyle.searchDiv}>
+      <h2 className={SearchStyle.searchHead}>
         Showing results for <span className="droppedResult">{searchTerm}</span>
       </h2>
 
-      <div className="searchedSongsContainer">
+      <div className={SearchStyle.searchedSongsContainer}>
         {songs.map((song, i) => (
           <SongCard
             key={song.key}

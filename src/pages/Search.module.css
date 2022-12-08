@@ -19,7 +19,13 @@
 .searchedSongsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 1180px;
+  align-items: stretch;
+  width: 100%;
   overflow: scroll;
+}
+
+.searchHead {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
 }
