@@ -10,6 +10,7 @@ import SongcardStyle from './SongCard.module.css'
 
 const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
   const dispatch = useDispatch()
+
   const handlePauseClick = () => {
     dispatch(playPause(false))
   }
@@ -37,7 +38,11 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
             handlePlay={handlePlayClick}
           />
         </div>
-        <img alt="song_img" src={song?.images?.coverart} />
+        <img
+          alt="song_img"
+          className={SongcardStyle.songImage}
+          src={song?.images?.coverart}
+        />
       </div>
 
       <div className={SongcardStyle.songMeta}>

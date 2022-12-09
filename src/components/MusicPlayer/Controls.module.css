@@ -1,34 +1,39 @@
 .controllersContainer {
+  display: flex;
+  flex-direction: row;
   margin-top: 20px;
+  align-items: center;
+  width: 550px;
+  justify-content: space-evenly;
 }
 
 .repeatButton {
-  font-size: 0.75em;
+  font-size: 2rem;
   color: cornflowerblue;
 }
 
 .playPrev {
-  font-size: 0.75em;
+  font-size: 2rem;
   color: darkslateblue;
 }
 
 .pause {
-  font-size: 0.75em;
+  font-size: 2rem;
   color: seagreen;
 }
 
 .play {
-  font-size: 1em;
+  font-size: 2.5rem;
   color: seagreen;
 }
 
 .playNext {
-  font-size: 0.75em;
+  font-size: 2rem;
   color: darkslateblue;
 }
 
 .shuffle {
-  font-size: 0.75em;
+  font-size: 2rem;
   color: steelblue;
 }
 

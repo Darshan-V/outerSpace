@@ -1,5 +1,6 @@
 .musicPlayer_App {
   display: flex;
+  bottom: 100%;
   flex-direction: column;
   align-items: stretch;
   flex-grow: 3;
@@ -7,7 +8,7 @@
 
 .home {
   width: 100%;
-  height: 100%;
+  height: 80vh;
   margin: 0;
   display: flex;
   background: linear-gradient(
@@ -24,15 +25,23 @@
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
 }
 
 .routes {
   overflow: hidden;
   flex-grow: 1;
   display: flex;
-  justify-content: center;
   align-items: stretch;
   flex-direction: column;
+  margin-left: 300px;
 }
 .routerDiv {
   display: flex;

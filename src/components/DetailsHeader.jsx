@@ -1,37 +1,38 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import DetailsHeaderStyle from './DetailsHeader.module.css'
 
 const DetailsHeader = ({ artistId, artistData, songData }) => {
   return (
-    <div className="detailsHeader">
-      <div className="profiles" />
+    <div className={DetailsHeaderStyle.detailsHeader}>
+      <div className={DetailsHeaderStyle.profiles} />
 
-      <div className="artistProfile">
+      <div className={DetailsHeaderStyle.artistProfile}>
         <img
           alt="profile"
           src={
             artistId
-              ? artistData.artists[artistId].attributes.artwork.url
+              ? artistData.data[0].attributes.artwork.url
               : songData?.images?.coverart
           }
-          className="artistImage"
+          className={DetailsHeaderStyle.artistImage}
         />
 
-        <div className="artistData">
-          <p className="artistSongData">
-            {artistId
-              ? artistData?.artists[artistId]?.attributes?.name
-              : songData?.title}
+        <div className={DetailsHeaderStyle.artistData}>
+          <p className={DetailsHeaderStyle.artistSongData}>
+            {artistId ? artistData?.data[0]?.attributes?.name : songData?.title}
           </p>
           {!artistId && (
             <Link to={`/artists/${songData?.artists[0]?.adamid}`}>
-              <p className="artistSongData">{songData?.subtitle}</p>
+              <p className={DetailsHeaderStyle.artistSongData}>
+                {songData?.subtitle}
+              </p>
             </Link>
           )}
 
-          <p className="artistSongText">
+          <p className={DetailsHeaderStyle.artistSongText}>
             {artistId
-              ? artistData?.artists[artistId]?.attributes?.genreNames[0]
+              ? artistData?.data[0]?.attributes?.genreNames[0]
               : songData?.genres?.primary}
           </p>
         </div>

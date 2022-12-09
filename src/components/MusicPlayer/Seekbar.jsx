@@ -1,21 +1,23 @@
 import React from 'react'
 import { BsFillSkipBackwardFill, BsFillSkipForwardFill } from 'react-icons/bs'
-import './Seekbar.css'
+import SeekbarStyle from './Seekbar.module.css'
 
 const Seekbar = ({ value, min, max, onInput, setSeekTime, appTime }) => {
   const getTime = (time) =>
     `${Math.floor(time / 60)}:${`0${Math.floor(time % 60)}`.slice(-2)}`
 
   return (
-    <div className="seekBarContainer">
+    <div className={SeekbarStyle.seekBarContainer}>
       <button
         type="button"
         onClick={() => setSeekTime(appTime - 5)}
-        className="seekButton"
+        className={SeekbarStyle.seekButton}
       >
         <BsFillSkipBackwardFill />
       </button>
-      <p className="seekLength">{value === 0 ? '0:00' : getTime(value)}</p>
+      <p className={SeekbarStyle.seekLength}>
+        {value === 0 ? '0:00' : getTime(value)}
+      </p>
       <input
         type="range"
         step="any"
@@ -23,13 +25,15 @@ const Seekbar = ({ value, min, max, onInput, setSeekTime, appTime }) => {
         min={min}
         max={max}
         onInput={onInput}
-        className="seekRange"
+        className={SeekbarStyle.seekRange}
       />
-      <p className="seekTime">{max === 0 ? '0:00' : getTime(max)}</p>
+      <p className={SeekbarStyle.seekTime}>
+        {max === 0 ? '0:00' : getTime(max)}
+      </p>
       <button
         type="button"
         onClick={() => setSeekTime(appTime + 5)}
-        className="seekButton"
+        className={SeekbarStyle.seekButton}
       >
         <BsFillSkipForwardFill />
       </button>

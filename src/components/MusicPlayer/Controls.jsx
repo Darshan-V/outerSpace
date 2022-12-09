@@ -6,7 +6,7 @@ import {
   BsFillPlayFill,
   BsShuffle,
 } from 'react-icons/bs'
-import './Controls.css'
+import ControlsStyles from './Controls.module.css'
 
 const Controls = ({
   isPlaying,
@@ -19,27 +19,39 @@ const Controls = ({
   handlePrevSong,
   handleNextSong,
 }) => (
-  <div className="controllersContainer">
+  <div className={ControlsStyles.controllersContainer}>
     <BsArrowRepeat
       color={repeat ? 'green' : 'white'}
       onClick={() => setRepeat((prev) => !prev)}
-      className="repeatButton"
+      className={ControlsStyles.repeatButton}
     />
     {currentSongs?.length && (
-      <MdSkipPrevious className="playPrev" onClick={handlePrevSong} />
+      <MdSkipPrevious
+        className={ControlsStyles.playPrev}
+        onClick={handlePrevSong}
+      />
     )}
     {isPlaying ? (
-      <BsFillPauseFill onClick={handlePlayPause} className="pause" />
+      <BsFillPauseFill
+        onClick={handlePlayPause}
+        className={ControlsStyles.pause}
+      />
     ) : (
-      <BsFillPlayFill onClick={handlePlayPause} className="play" />
+      <BsFillPlayFill
+        onClick={handlePlayPause}
+        className={ControlsStyles.play}
+      />
     )}
     {currentSongs?.length && (
-      <MdSkipNext className="playNext" onClick={handleNextSong} />
+      <MdSkipNext
+        className={ControlsStyles.playNext}
+        onClick={handleNextSong}
+      />
     )}
     <BsShuffle
       color={shuffle ? 'green' : 'white'}
       onClick={() => setShuffle((prev) => !prev)}
-      className="shuffle"
+      className={ControlsStyles.shuffle}
     />
   </div>
 )

@@ -1,0 +1,22 @@
+.artistCard {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  height: 250px;
+  align-items: center;
+  background-color: rgb(3, 37, 58);
+  border-radius: 10px;
+}
+
+.artistImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.trackSub {
+  color: white;
+  max-width: 100px;
+  overflow: hidden;
+  padding-top: 5px;
+}

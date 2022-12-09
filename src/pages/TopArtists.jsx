@@ -1,7 +1,7 @@
 import React from 'react'
 import { ArtistCard, Loader } from '../components'
 import { useGetTopChartsQuery } from '../reducers/services/shazamservice'
-import './TopArtists.css'
+import TopArtistStyle from './TopArtists.module.css'
 
 const TopArtists = () => {
   const { data, isFetching } = useGetTopChartsQuery()
@@ -9,9 +9,9 @@ const TopArtists = () => {
   if (isFetching) return <Loader title="Loading artists..." />
 
   return (
-    <div className="topArtistsPage">
-      <h2 className="topArtistsHead">Top Artist</h2>
-      <div className="ArtistCardContainer">
+    <div className={TopArtistStyle.topArtistsPage}>
+      <h2 className={TopArtistStyle.topArtistsHead}>Top Artist</h2>
+      <div className={TopArtistStyle.ArtistCardContainer}>
         {data.map((track) => (
           <ArtistCard key={track.key} track={track} />
         ))}

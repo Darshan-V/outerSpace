@@ -1,0 +1,23 @@
+.topArtistsPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 2;
+}
+
+.ArtistCardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+  flex-grow: 2;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topArtistsHead {
+  color: white;
+  margin-left: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}

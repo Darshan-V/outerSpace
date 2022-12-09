@@ -1,19 +1,20 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import ArtistCardStyle from './ArtistCard.module.css'
 
 const ArtistCard = ({ track }) => {
   const navigate = useNavigate()
   return (
     <div
-      className="artistCard"
+      className={ArtistCardStyle.artistCard}
       onClick={() => navigate(`/artists/${track.artists[0].adamid}`)}
     >
       <img
         alt="song_img"
         src={track?.images?.coverart}
-        className="artistImage"
+        className={ArtistCardStyle.artistImage}
       />
-      <p className="trackSub">{track.subtitle}</p>
+      <p className={ArtistCardStyle.trackSub}>{track.subtitle}</p>
     </div>
   )
 }

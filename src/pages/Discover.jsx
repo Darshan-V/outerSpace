@@ -39,16 +39,18 @@ const Discover = () => {
             ))}
           </select>
         </div>
-        {data.map((song, i) => (
-          <SongCard
-            key={song.key}
-            song={song}
-            isPlaying={isPlaying}
-            activeSong={activeSong}
-            data={data}
-            i={i}
-          />
-        ))}
+        <div className={DiscoverStyles.DiscoveredSongs}>
+          {data.map((song, i) => (
+            <SongCard
+              key={song.key}
+              song={song}
+              isPlaying={isPlaying}
+              activeSong={activeSong}
+              data={data}
+              i={i}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

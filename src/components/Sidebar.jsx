@@ -5,12 +5,14 @@ import {
   HiOutlineHome,
   HiOutlineUserGroup,
   HiOutlineHeart,
+  HiHome,
 } from 'react-icons/hi'
 import SidebarStyle from './Sidebar.module.css'
 
 const links = [
+  { name: 'Top Play', to: '/', icon: HiHome },
   { name: 'Top Charts', to: '/top-charts', icon: HiOutlineHashtag },
-  { name: 'Discover', to: '/', icon: HiOutlineHome },
+  { name: 'Discover', to: '/discover', icon: HiOutlineHome },
   { name: 'Top Artists', to: '/top-artists', icon: HiOutlineUserGroup },
   { name: 'Liked Songs', to: '/my-playlist', icon: HiOutlineHeart },
 ]

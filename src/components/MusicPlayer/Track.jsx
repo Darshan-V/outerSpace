@@ -1,20 +1,20 @@
 import React from 'react'
-import './Track.css'
+import TrackStyle from './Track.module.css'
 
-const Track = ({ isPlaying, isActive, activeSong }) => (
-  <div className="trackContainer">
-    <div className="trackImage">
+const Track = ({ activeSong }) => (
+  <div className={TrackStyle.trackContainer}>
+    <div className={TrackStyle.trackImage}>
       <img
         src={activeSong?.images?.coverart}
         alt="cover art"
-        className="trackCover"
+        className={TrackStyle.trackCover}
       />
     </div>
-    <div className="songPlayer">
-      <p className="songHeadPlayer">
+    <div className={TrackStyle.songPlayer}>
+      <p className={TrackStyle.songHeadPlayer}>
         {activeSong?.title ? activeSong?.title : 'No active Song'}
       </p>
-      <p className="songSubPlayer">
+      <p className={TrackStyle.songSubPlayer}>
         {activeSong?.subtitle ? activeSong?.subtitle : 'No active Song'}
       </p>
     </div>

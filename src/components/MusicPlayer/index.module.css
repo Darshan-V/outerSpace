@@ -16,6 +16,7 @@
     rgb(0, 0, 0) 98.6%
   );
   overflow: scroll;
+  position: fixed;
 }
 .mainControls {
   display: flex;

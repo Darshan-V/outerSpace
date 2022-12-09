@@ -4,10 +4,10 @@ import {
   BsVolumeDownFill,
   BsFillVolumeMuteFill,
 } from 'react-icons/bs'
-import './Volumebar.css'
+import VolumebarStyle from './Volumebar.module.css'
 
 const VolumeBar = ({ value, min, max, onChange, setVolume }) => (
-  <div className="volumeBar">
+  <div className={VolumebarStyle.volumeBar}>
     {value <= 1 && value > 0.5 && (
       <BsFillVolumeUpFill onClick={() => setVolume(0)} />
     )}
@@ -22,7 +22,7 @@ const VolumeBar = ({ value, min, max, onChange, setVolume }) => (
       min={min}
       max={max}
       onChange={onChange}
-      className="volumeRange"
+      className={VolumebarStyle.volumeRange}
     />
   </div>
 )

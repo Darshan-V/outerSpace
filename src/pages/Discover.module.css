@@ -10,19 +10,14 @@
 .discoverGenres {
   display: flex;
   width: 100%;
-  height: 30px;
   margin-left: 5px;
   justify-content: space-between;
   flex-direction: row;
-}
-
-.genreSelector {
-  box-shadow: 2px 2px 2px 2px rgb(57 119 131);
+  align-items: center;
 }
 
 .genreSelector:hover {
   background: rgb(27, 35, 64);
-  box-shadow: 2px 5px 5px rgb(27, 35, 64);
 }
 
 .genreSelector {
@@ -34,16 +29,14 @@
   font-style: italic;
   margin-top: 2px;
   margin-right: 25px;
-  border: 0;
 }
 
 .topchartsLabel {
   color: white;
-  height: 50px;
   font-weight: bolder;
   font-style: italic;
   overflow: hidden;
-  margin: 10px;
+  font-size: 2rem;
 }
 
 .discoveredSongCard {
@@ -54,6 +47,11 @@
   flex: auto;
   align-items: stretch;
   margin-top: 15px;
+}
+.DiscoveredSongs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .arrow {

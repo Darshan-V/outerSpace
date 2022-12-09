@@ -1,0 +1,33 @@
+.detailsHeader {
+  display: flex;
+}
+
+.artistProfile {
+  display: flex;
+}
+
+.artistImage {
+  width: 200px;
+  height: 200px;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.artistData {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.artistSongData {
+  color: white;
+  padding-bottom: 50px;
+  font-size: 3rem;
+}
+
+.artistSongText {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+}

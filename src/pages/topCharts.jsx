@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 import { Loader, SongCard } from '../components/index'
 import { useGetTopChartsQuery } from '../reducers/services/shazamservice'
-import './topCharts.css'
+import TopChartsStyle from './topCharts.module.css'
 
 const TopCharts = () => {
   const { data, isFetching } = useGetTopChartsQuery()
@@ -12,10 +12,10 @@ const TopCharts = () => {
 
   if (isFetching) return <Loader title="Loading Top Charts" />
   return (
-    <div className="topCharts">
-      <h2 className="topchartsLabel">Discover Top Charts</h2>
+    <div className={TopChartsStyle.topCharts}>
+      <h2 className={TopChartsStyle.topchartsLabel}>Discover Top Charts</h2>
 
-      <div className="topChartsSongsContainer">
+      <div className={TopChartsStyle.topChartsSongsContainer}>
         {data.map((song, i) => (
           <SongCard
             key={song.key}

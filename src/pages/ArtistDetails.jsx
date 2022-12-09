@@ -15,11 +15,13 @@ const ArtistDetails = () => {
     return <Loader title="Loading Artist details..." />
   }
 
+  console.log(artistData.data[0].views['top-songs'].data)
+
   return (
     <div className="ArtistDetailsContainer">
       <DetailsHeader artistId={artistId} artistData={artistData} />
       <RelatedArtistsSongs
-        data={Object.values(artistData.songs)}
+        data={Object.values(artistData?.data[0]?.views['top-songs']?.data)}
         artistId={artistId}
         isPlaying={isPlaying}
         activeSong={activeSong}

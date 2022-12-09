@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import './index.css'
+import indexStyle from './index.module.css'
 
 import {
   nextSong,
@@ -23,11 +23,6 @@ const MusicPlayer = () => {
   const [repeat, setRepeat] = useState(false)
   const [shuffle, setShuffle] = useState(false)
   const dispatch = useDispatch()
-
-  //?TODO: put it inside handleevents
-  // useEffect(() => {
-  //   if (currentSongs?.length) dispatch(playPause(true))
-  // }, [currentIndex])
 
   const handlePlayPause = () => {
     if (!isActive) return
@@ -60,14 +55,14 @@ const MusicPlayer = () => {
   }
   //TODO diff? passing props to child and using usedispatch to store in redux
   return (
-    <div className="mainContainer">
+    <div className={indexStyle.mainContainer}>
       <Track
         isPlaying={isPlaying}
         isActive={isActive}
         activeSong={activeSong}
       />
 
-      <div className="mainControls">
+      <div className={indexStyle.mainControls}>
         <Controls
           isPlaying={isPlaying}
           isActive={isActive}

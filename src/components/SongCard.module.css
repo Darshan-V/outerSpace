@@ -1,8 +1,6 @@
 .songCardContainer {
   display: flex;
   flex-direction: row;
-  min-width: 540px;
-  min-height: 80px;
   max-width: 100%;
   max-height: 80px;
   padding: 4px;
@@ -24,9 +22,10 @@
   box-shadow: 2px 5px 5px rgb(77, 155, 171);
 }
 
-img {
-  max-width: 100%;
-  max-height: 50px;
+.songImage {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
 }
 
 .song {
