@@ -94,6 +94,8 @@
   background-color: rgb(24, 44, 61);
   align-items: center;
   height: 100%;
+  width: 100%;
+  overflow: scroll;
 }
 
 .topArtistsHead {
