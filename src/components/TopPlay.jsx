@@ -50,7 +50,7 @@ const TopPlay = () => {
     divRef.current.scrollIntoView({ behavior: 'smooth' })
   })
 
-  const topPlays = data?.slice(0, 10)
+  const topPlays = data?.slice(0, 20)
 
   const handlePauseClick = (song, i) => {
     dispatch(setActiveSong({ song, data, currentSongs, i }))
@@ -96,7 +96,7 @@ const TopPlay = () => {
             </Link>
           </div>
           <div className={TopPlayStyle.topArtistsPeople}>
-            {topPlays?.slice(0, 10).map((artist) => (
+            {topPlays?.slice(0, 18).map((artist) => (
               <div key={artist?.key} className={TopPlayStyle.artistGroup}>
                 <Link to={`/artists/${artist?.artists[0].adamid}`}>
                   <img
