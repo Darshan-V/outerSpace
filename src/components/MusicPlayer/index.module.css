@@ -5,7 +5,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
   min-height: 20vh;
   max-height: 20vh;
   border-top: groove slategray;
@@ -17,6 +16,8 @@
   );
   overflow: scroll;
   position: fixed;
+  flex-grow: 2;
+  flex-shrink: 1;
 }
 .mainControls {
   display: flex;

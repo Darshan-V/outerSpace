@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getLikedSongs } from './custom'
 import SongCard from './SongCard'
+import MyPlaylistStyles from './MyPlaylist.module.css'
 
 import { useSelector } from 'react-redux'
 
@@ -20,15 +21,20 @@ const MyPlaylist = () => {
   }, [])
 
   return (
-    <div className="myPlaylist">
-      {likedSong?.map((song) => (
-        <SongCard
-          key={song?.data?.song?.key}
-          song={song?.data?.song}
-          isPlaying={isPlaying}
-          activeSong={activeSong}
-        />
-      ))}
+    <div className={MyPlaylistStyles.myPlaylist}>
+      <h2 className={MyPlaylistStyles.title}>Liked List</h2>
+      <div className={MyPlaylistStyles.songs}>
+        {likedSong?.map((song, i) => (
+          <SongCard
+            key={song?.data?.song?.key}
+            song={song?.data?.song}
+            isPlaying={isPlaying}
+            activeSong={activeSong}
+            likedSong={likedSong}
+            i={i}
+          />
+        ))}
+      </div>
     </div>
   )
 }

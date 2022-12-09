@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RxDotsVertical } from 'react-icons/rx'
+import { HiOutlineHeart } from 'react-icons/hi'
 
 const Dropdown = (props) => {
   const [display, setDisplay] = useState('none')
@@ -14,7 +14,7 @@ const Dropdown = (props) => {
   return (
     <div className="dropDown">
       <div className="dropDownIcon">
-        <RxDotsVertical onClick={handleClick} />
+        <HiOutlineHeart onClick={handleClick} />
       </div>
       <div className="menuChild" style={{ display: display }}>
         {props.children}

@@ -43,7 +43,7 @@ const Songbar = ({
         <PlayPause
           isPlaying={isPlaying}
           activeSong={activeSong}
-          song={song}
+          song={song[0]?.attributes?.previews?.[0]?.url}
           handlePause={() => handlePauseClick(song, i)}
           handlePlay={() => handlePlayClick(song, i)}
         />
