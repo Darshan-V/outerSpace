@@ -9,6 +9,8 @@ import {
   useGetArtistDetailsQuery,
 } from '../reducers/services/shazamservice'
 
+import SongDetailsStyle from './SongDetails.module.css'
+
 const SongDetails = () => {
   const dispatch = useDispatch()
   const { songid, id: artistId } = useParams()
@@ -39,13 +41,13 @@ const SongDetails = () => {
     dispatch(playPause(true))
   }
   return (
-    <div className="detailsContainer">
+    <div className={SongDetailsStyle.detailsContainer}>
       <DetailsHeader
         artistId={artistId}
         artistData={artistData}
         songData={songData}
       />
-      <div className="relatedSongsContainer">
+      <div className={SongDetailsStyle.relatedSongsContainer}>
         <RelatedSongs
           data={data}
           artistId={artistId}

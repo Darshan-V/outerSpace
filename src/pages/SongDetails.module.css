@@ -1,0 +1,12 @@
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+  overflow: scroll;
+}
+
+.relatedSongsContainer {
+  display: flex;
+  flex-direction: column;
+}
