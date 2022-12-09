@@ -8,7 +8,7 @@
   position: fixed;
 }
 
-.sideBar h2 {
+.OuterSpace {
   color: white;
   margin: auto;
   padding: 20px;
@@ -40,4 +40,10 @@
   border-bottom: groove gray;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.Menu {
+  color: white;
+  font-size: 1.5em;
+  padding-bottom: 5px;
 }

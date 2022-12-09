@@ -6,6 +6,7 @@ import {
   HiOutlineUserGroup,
   HiOutlineHeart,
   HiHome,
+  HiMenu,
 } from 'react-icons/hi'
 import SidebarStyle from './Sidebar.module.css'
 
@@ -19,6 +20,7 @@ const links = [
 
 const NavLinks = ({ handleClick }) => (
   <div className={SidebarStyle.navLinks}>
+    <HiMenu className={SidebarStyle.Menu} />
     {links.map((item) => (
       <NavLink
         key={item.name}
@@ -33,11 +35,11 @@ const NavLinks = ({ handleClick }) => (
   </div>
 )
 
-const Sidebar = () => {
+const Sidebar = ({ handleClick }) => {
   return (
     <>
       <div className={SidebarStyle.sideBar}>
-        <h2>OuterSpace</h2>
+        <h2 className={SidebarStyle.OuterSpace}>OuterSpace</h2>
         <NavLinks />
       </div>
     </>
