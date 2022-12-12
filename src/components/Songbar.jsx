@@ -28,14 +28,14 @@ const Songbar = ({
         />
         <div className={SongBarStyle.ArtistLink}>
           {!artistId ? (
-            <Link to={`/songs/${song.key}`}>
+            <Link to={`/songs/${song?.id}`}>
               <p className={SongBarStyle.songname}>{song.title}</p>
             </Link>
           ) : (
-            <p className={SongBarStyle.songname}>{song.attributes.name}</p>
+            <p className={SongBarStyle.songname}>{song?.attributes?.name}</p>
           )}
           <p className={SongBarStyle.songMeta}>
-            {artistId ? song.attributes.albumName : song.subtitle}
+            {artistId ? song?.attributes?.albumName : song.subtitle}
           </p>
         </div>
       </div>
@@ -43,9 +43,9 @@ const Songbar = ({
         <PlayPause
           isPlaying={isPlaying}
           activeSong={activeSong}
-          song={song[0]?.attributes?.previews?.[0]?.url}
-          handlePause={() => handlePauseClick(song, i)}
-          handlePlay={() => handlePlayClick(song, i)}
+          song={song?.attributes?.previews[0]?.url}
+          handlePause={handlePauseClick}
+          handlePlay={handlePlayClick}
         />
       ) : null}
     </div>

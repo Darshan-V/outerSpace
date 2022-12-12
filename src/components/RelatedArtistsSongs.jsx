@@ -1,6 +1,6 @@
 import React from 'react'
 import Songbar from './Songbar'
-// import './RelatedSongs.css'
+import RelatedArtistStyle from './RelatedArtist.module.css'
 
 const RelatedArtistsSongs = ({
   data,
@@ -11,9 +11,9 @@ const RelatedArtistsSongs = ({
   handlePlayClick,
 }) => {
   return (
-    <div className="relatedSongsContainer">
-      <h2 className="relatedSongsHead">Related Songs:</h2>
-      <div className="relatedSongbar">
+    <div className={RelatedArtistStyle.relatedSongsContainer}>
+      <h2 className={RelatedArtistStyle.relatedSongsHead}>Related Songs:</h2>
+      <div className={RelatedArtistStyle.relatedSongbar}>
         {data?.map((song, i) => (
           <Songbar
             key={`${song.key}-${artistId}-${i}`}

@@ -13,7 +13,10 @@ const TopChartCard = ({
   handlePauseClick,
   handlePlayClick,
 }) => (
-  <div className={TopPlayStyle.tcContainer}>
+  <div
+    className={TopPlayStyle.tcContainer}
+    onClick={isPlaying ? handlePauseClick : handlePlayClick}
+  >
     <div className={TopPlayStyle.tcElement}>
       <img
         className={TopPlayStyle.tcImage}
@@ -29,13 +32,15 @@ const TopChartCard = ({
         </Link>
       </div>
     </div>
-    <PlayPause
-      isPlaying={isPlaying}
-      activeSong={activeSong}
-      song={song}
-      handlePause={handlePauseClick}
-      handlePlay={handlePlayClick}
-    />
+    <div className={TopPlayStyle.tcPlayPause}>
+      <PlayPause
+        isPlaying={isPlaying}
+        activeSong={activeSong}
+        song={song}
+        handlePause={handlePauseClick}
+        handlePlay={handlePlayClick}
+      />
+    </div>
   </div>
 )
 

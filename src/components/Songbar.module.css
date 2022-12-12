@@ -3,15 +3,10 @@
   flex-direction: row-reverse;
   width: 98%;
   padding: 4px;
-  border-bottom: groove;
-  background: radial-gradient(
-    circle at 24.1% 68.8%,
-    rgb(93, 92, 92) 0%,
-    rgb(37, 46, 80) 99.4%
-  );
+  background: transparent;
   align-items: center;
   margin: 5px;
-  border-radius: 10px;
+  margin-bottom: 5px;
   flex: auto;
 }
 
@@ -25,10 +20,18 @@
   align-items: center;
 }
 
-.ArtistLink > p {
+.songs:hover {
+  background: rgba(128, 128, 128, 0.325);
+}
+
+.ArtistLink {
   color: azure;
+  display: flex;
   margin-left: 10px;
+  width: 200px;
   overflow: hidden;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 .songname {

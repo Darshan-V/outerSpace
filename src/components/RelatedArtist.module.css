@@ -1,0 +1,16 @@
+.relatedSongsContainer {
+  display: grid;
+  align-content: space-around;
+  align-items: center;
+  justify-items: stretch;
+}
+
+.relatedSongsHead {
+  color: white;
+}
+
+.relatedSongbar {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}

@@ -13,14 +13,16 @@
 }
 
 .artistImage {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 180px;
+  padding: 5px;
+  margin: 5px;
   border-radius: 10px;
 }
 
 .trackSub {
   color: white;
-  max-width: 100px;
+  max-width: 200px;
   overflow: hidden;
   padding-top: 5px;
 }
