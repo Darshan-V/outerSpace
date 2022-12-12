@@ -1,12 +1,11 @@
 async function writeLikedSongs(song) {
   let likedSongs = await fetch('http://localhost:5000', {
     method: 'POST',
-    body: JSON.stringify(song),
+    body: JSON.stringify({ song: song, key: song?.song?.key }),
     headers: {
       'content-type': 'application/json',
     },
   })
-
   return likedSongs
 }
 

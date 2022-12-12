@@ -2,13 +2,14 @@ import mongoose from 'mongoose'
 
 const songListSchema = new mongoose.Schema({
   data: Object,
+  uid: String,
 })
 
 const model = mongoose.model('playlists', songListSchema)
 
-export function addSong(song) {
+export function addSong(song, likedKey) {
   // let likedSong = JSON.stringify(song)
-  const a = new model({ data: song })
+  const a = new model({ data: song, uid: likedKey })
   a.save()
   return a
 }

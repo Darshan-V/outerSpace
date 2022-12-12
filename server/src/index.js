@@ -12,8 +12,9 @@ app.use(cors())
 
 app.post('/', async (req, res) => {
   try {
-    let song = req.body
-    const likedSong = await addSong(song)
+    let song = req.body.song
+    let key = req.body.key
+    const likedSong = await addSong(song, key)
     res.json(likedSong)
   } catch (error) {
     res.json(error)
