@@ -35,7 +35,7 @@ const NavLinks = ({ handleClick }) => (
   </div>
 )
 
-const Sidebar = ({ handleClick }) => {
+const Sidebar = () => {
   return (
     <>
       <div className={SidebarStyle.sideBar}>

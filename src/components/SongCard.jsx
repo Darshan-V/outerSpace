@@ -20,14 +20,8 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
     dispatch(setActiveSong({ song, data, i }))
     dispatch(playPause(true))
   }
-
   return (
     <div className={SongcardStyle.songCardContainer}>
-      <div className={SongcardStyle.songMenu}>
-        <Dropdown>
-          <Element song={song} />
-        </Dropdown>
-      </div>
       <div className={SongcardStyle.song}>
         <div className={SongcardStyle.songTitle}>
           <PlayPause
@@ -63,6 +57,11 @@ const SongCard = ({ song, isPlaying, activeSong, data, i }) => {
             {song.subtitle}
           </Link>
         </p>
+      </div>
+      <div className={SongcardStyle.songMenu}>
+        <Dropdown>
+          <Element song={song} />
+        </Dropdown>
       </div>
     </div>
   )

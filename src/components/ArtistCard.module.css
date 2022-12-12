@@ -8,6 +8,10 @@
   border-radius: 10px;
 }
 
+.artistCard:hover {
+  background: rgba(128, 128, 128, 0.404);
+}
+
 .artistImage {
   width: 200px;
   height: 200px;

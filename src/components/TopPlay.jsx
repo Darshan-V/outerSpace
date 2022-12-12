@@ -61,7 +61,6 @@ const TopPlay = () => {
     dispatch(setActiveSong({ song, data, currentSongs, i }))
     dispatch(playPause(true))
   }
-
   return (
     <div ref={divRef} className={TopPlayStyle.homeTopPlay}>
       <div className={TopPlayStyle.topChartsContainer}>
@@ -96,7 +95,7 @@ const TopPlay = () => {
             </Link>
           </div>
           <div className={TopPlayStyle.topArtistsPeople}>
-            {topPlays?.slice(0, 18).map((artist) => (
+            {topPlays?.slice(0, 8).map((artist) => (
               <div key={artist?.key} className={TopPlayStyle.artistGroup}>
                 <Link to={`/artists/${artist?.artists[0].adamid}`}>
                   <img

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { HiOutlineHeart } from 'react-icons/hi'
-
+import DropdownStyle from './Dropdown.module.css'
 const Dropdown = (props) => {
   const [display, setDisplay] = useState('none')
 
@@ -14,7 +14,10 @@ const Dropdown = (props) => {
   return (
     <div className="dropDown">
       <div className="dropDownIcon">
-        <HiOutlineHeart onClick={handleClick} />
+        <HiOutlineHeart
+          className={DropdownStyle.LikeIcon}
+          onClick={handleClick}
+        />
       </div>
       <div className="menuChild" style={{ display: display }}>
         {props.children}

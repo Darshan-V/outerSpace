@@ -34,19 +34,17 @@
 .tcContainer {
   display: flex;
   flex-direction: row-reverse;
-  border-bottom: groove;
   width: 100%;
   padding: 5px;
-  background: radial-gradient(
-    circle at 24.1% 68.8%,
-    rgb(93, 92, 92) 0%,
-    rgb(37, 46, 80) 99.4%
-  );
+  background: transparent;
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
   margin: 10px;
-  border-radius: 10px;
+}
+
+.tcContainer:hover {
+  background: rgba(128, 128, 128, 0.449);
 }
 
 .tcElement {
